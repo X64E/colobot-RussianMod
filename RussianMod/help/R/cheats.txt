@@ -1,0 +1,55 @@
+\b;Коды к игре
+Прерасно, вы нашли эту секретную страницу. Мы надеемся вы будет использовать информацию содержащуюся здесь для других целей только не для обманных целей. Например тестирование игры или запись классного видео о Colobot.
+
+\b;Консоль
+Вы можете открыть консоль нажатием кнопки \key;\c;~\n;\norm; на вашей клавиатуре. Нажмите \key;\c;ENTER\n;\norm; чтобы скрыть это или чтобы выполнить одну из команд приведенных ниже.
+
+\t;Миссии
+o \c;winmission   \n;Немедленно успешно заканчивает текущую миссию
+o \c;lostmission  \n;Немедленно заканчивает текущую миссию с поражением
+o \c;allmission   \n;All missions are unlocked, works also in main menu
+o \c;showsoluce   \n;All solutions are unlocked, works also in main menu
+
+\t;Игровой процесс
+o \c;allresearch  \n;Все исследования сделаны
+o \c;allbuildings \n;All buildings are enabled
+o \c;all          \n;\c;allbuildings\n; + \c;allresearch\n;
+o \c;fullenergy   \n;Восстановите энегрию в текущем выбранном боте
+o \c;fullshield   \n;Востановите щит в текущем выбранном объекте
+o \c;fullrange    \n;Летающий реактор холодный
+o \c;fullpower    \n;\c;fullenergy\n; + \c;fullshield\n; + \c;fullrange\n;
+o \c;selectinsect \n;You can select and control aliens, works also in main menu, type again to disable
+o \c;fly          \n;Вы можете летать даже если летание отключено в текущей миссии
+o \c;invradar     \n;Mini-map works like you would have built a \l;radar\u object\radar;, works also in main menu, type again to disable
+o \c;addfreezer   \n;Летающий реактор нагревается более медленно
+o \c;addhusky     \n;Вы можете получать меньше повреждений чем обычно
+o \c;nolimit      \n;Вы можете лететь выше
+o \c;trainerpilot \n;Вы можете вести роботов, которые раньше могли контролироваться только программами.
+o \c;noclip       \n;The currently selected object can pass through objects
+o \c;clip         \n;Disable \c;noclip\n; on the currently selected object
+o \c;speed        \n;Set the speed of the game to the given number, for example \c;speed 2\n; - two times faster, \c;speed 0.5\n; - two times slower, works also in main menu
+
+\t;Отладка
+Эти команды также работают в главном меню. Напишите их опять, чтобы их выключить.
+o \c;showstat     \n;Show debug statistics on the screen, \key;F12\norm; keyboard key has the same effect
+o \c;debugmode    \n;Enable debug mode (useful for the game developers): the verbose debugging of events and other things; make sure you run the game with \c;-loglevel trace\n; to see the effect; see also \c;-debug\n; commandline parameter
+
+\t;Эстетика
+o \c;photo1       \n;Свободная камера, вы можете менять угол клавишами \key;\c;+\n;\norm; и \key;\c;-\n;\norm;, нажмите опять, чтобы это отключить
+o \c;photo2       \n;Также как \c;photo1\n;, за исключением того, что это скрывает интерфейс, нажмите опять, чтобы это отключить
+
+\b;CBOT
+There are hidden commands in CBOT that are not even highlighted in the editor. They are considered cheating, so do not use them for "legal" programs. It should be fine to use them for level creation though if there is no other way.
+Numbers mean order of parameters.
+
+o \c;\l;produce\u cbot\produce;      \n;Немедленно создает объект
+o \c;ipf          \n;Sets the number of instructions per frame, \c;1\n;: the number, default is \c;100\n;
+o \c;delete       \n;Damages the object, \c;1\n;: object's ID, \c;2\n;: magnifyDamage multiplier, without \c;2\n; the object explodes
+o \c;setbuild     \n;Sets buildings bitmask, \c;1\n;: new bitmask
+o \c;setresearchenable \n;Sets researches bitmask, \c;1\n;: new bitmask
+o \c;setresearchdone \n;Sets done researches bitmask, \c;1\n;: new bitmask
+o \c;getbuild     \n;Returns buildings bitmask
+o \c;getresearchenable \n;Returns researches bitmask
+o \c;getresearchdone \n;Returns done researches bitmask
+o \c;playmusic    \n;Plays music, \c;1\n;: file name, \c;2\n;: repeat
+o \c;stopmusic    \n;Останавливает музыку

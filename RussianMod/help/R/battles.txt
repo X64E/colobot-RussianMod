@@ -1,0 +1,54 @@
+\b;Битвы программ
+Битва программ - это полностью новый игровой режим представленный в Colobot: Gold Edition. Идея в том, что вы уставливаете две программы (вашу и оппонента) чтобы они сражались друг с другом. Игрок не может взаимодействовать с миром вручную.
+
+\b;Как управлять уровнем
+
+\t;Начать битву программ
+In order to start a code battle you need to:
+1. Run all the necessary programs for your/all team(s).
+2. Press the \button 21; button above the mini-map.
+
+\t;Управление видом наблюдателя
+После того, как битва программ началась, камере будет поставлена в специальный режим:
+o One can select objects as a player normally would, but one will not see their interface and the camera does not rotate when the object rotates. One can also use numerical keyboard instead of mouse in order to rotate the object-centered camera.
+o One can also switch to the free camera view by clicking somewhere on the map. One can move around in this view by using the numerical keyboard and \key;PageUp\norm;/\key;PageDown\norm; keys.
+o One can return to the normal view by pressing the \button 13; button above the mini-map.
+
+\b;Основые производственной линии\m production;
+С новыми функциями предоставленными в Gold Edition, вы можете создать полностью автоматизированную базу, которой не нужно никакое влияние со стороны \l;человека\u object\human;. Все они описаны в \l;Документации CBOT\u cbot;.
+
+Произведственная линия объяснена в Миссиях и Упражнениях, но вы можете прямо перейти в битвы программ не нарушая всю игру. Поэтому здесь приведено краткое описание как что работает в Colobot.
+
+\t;Что вы хотите достичь
+В основном, вы хотите уничтожить оппонента. Чтобы это сделать, вам нужно что то летающее, например, робот, особенно, \l;стрелок\u object\botfr;. Но вы, вероятно, будете их часто терять, поэтому, возможно, вы должны поддерживать производство работающим. Например, больше \l;сборщиков\u object\botgr; или больше \l;фабрик\u object\factory;, \l;конвертеров\u object\convert; и так далее было бы полезно в этом случае. Запомните, что роботам нужны \l;батареи\u object\power;. В любом случае, перед тем как вы начнете, вы должны также сделать несколько \l;исследований\u object\research; чтобы получить лучшие технологии. И опять, вы вначале с одним \l;роботом\u object\botgr; и \l;Титаном\u object\titan;.
+
+\image productionline1 22 10;
+
+\t;Производство титана
+1. \l;Найдите\u cbot\radar; \l;Титан\u object\titan;.
+2. \l;Постройте\u cbot\build; \l;Конвертер\u object\convert;.
+3. Найдите \l;Титановую руду\u object\titanore;.
+4. Поместите ее в конвертер. Отойдите назад и подождите, пока конвертер закончит работу.
+5. Используйте или переместите ваш новый Титан.
+Повторяйте шаги 3-5 чтобы поддерживать ваше производство работающим.
+
+\t;Исследования
+1. \l;Build\u cbot\build; a \l;ResearchCenter\u object\research;.
+2. Power it with a \l;PowerCell\u object\power;.
+3. \l;Request\u cbot\research; a \l;research\u cbot\researches; and wait until the research center is done.
+
+\t;Производство роботов
+1. \l;Build\u cbot\build; a \l;BotFactory\u object\factory;.
+2. Place a \l;Titanium\u object\titan; inside and move back.
+3. \l;Request\u cbot\factory; a construction of a robot and wait until the bot factory is done.
+4. Power the robot with a \l;PowerCell\u object\power;.
+
+\t;Произодство батарей
+1. \l;Build\u cbot\build; a \l;PowerPlant\u object\energy;.
+2. Place a \l;Titanium\u object\titan; in it and wait until the power plant is done.
+
+\t;Есть еще
+Есть еще больше опций, это только основные. Прочитайте документацию, играйте в игруи творчески думайте чтобы придумать новые идеи. Удачи и веселья!
+
+\t;См. также
+\l;Программирование\u cbot\programming;, \l;типы\u cbot\type; и \l;категории\u cbot\category;.

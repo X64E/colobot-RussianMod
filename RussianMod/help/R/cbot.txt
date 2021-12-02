@@ -1,0 +1,132 @@
+\b;Программирование - язык CBOT
+Язык CBOT очень близок к структуре и синтаксису языков C++ и Java. Он был адаптировать для специальный целей COLOBOT и для эффективного педагогического подхода.
+Этот язык состоит из инструкций (смотри ниже), \l;блоки\u cbot\bloc;, \l;функции\u cbot\function;, \l;классы\u cbot\class;, \l;переменные\u cbot\var;, \l;массивы\u cbot\array;, \l;выражения\u cbot\expr; и \l;условия\u cbot\cond;.
+
+В редакторе программы, инструкция в языке CBOT всегда отображется как \token;инструкция\norm;. Если инструкция не подсвечена, это означает что она неправильно написана. Имена инструкций всегда пишутся в нижнем регистре.
+
+o  \c;\type;Тип\norm;\n;
+\l;Тип\u cbot\type; переменной выглядит следующим образом: \type;тип\norm;. 
+
+o  \c;\const;Константы\norm;\n;
+Константы такие как \l;категории\u cbot\category; отображаются следующим образом: \const;константа\norm;. 
+
+\t;Инструкции в языке CBOT:
+\c;\l;extern\u cbot\extern;     \n;Показывает главную функцию
+\c;\l;if\u cbot\if;         \n;Структура выбора
+\c;\l;else\u cbot\if;       \n;Структура альтернативного выбора
+\c;\l;switch\u cbot\switch;     \n;Структура множественного выбора
+\c;\l;case\u cbot\switch;       \n;Один выбор
+\c;\l;default\u cbot\switch;    \n;Выбор по умолчанию 
+\c;\l;for\u cbot\for;        \n;Структура цикла
+\c;\l;while\u cbot\while;      \n;Структура управления
+\c;\l;do\u cbot\do;         \n;Структура управления
+\c;\l;break\u cbot\break;      \n;Выход из цикла
+\c;\l;continue\u cbot\continue;   \n;Продолжает цикл
+\c;\l;return\u cbot\return;     \n;Выход из функции
+\c;\l;sizeof\u cbot\sizeof;     \n;Размер массива
+
+\t;Специальные инструкции для ботов:
+\c;\l;detect\u cbot\detect;     \n;Simple object detection
+\c;\l;radar\u cbot\radar;      \n;Advanced object detection
+\c;\l;radarall\u cbot\radarall;   \n;Advanced multiple objects detection
+\c;\l;search\u cbot\search;     \n;Object detection from a specific point
+\c;\l;direction\u cbot\direct;  \n;Calculates a rotation angle
+\c;\l;distance\u cbot\dist;   \n;Calculates a distance
+\c;\l;distance2d\u cbot\dist2d; \n;Calculates a distance
+\c;\l;wait\u cbot\wait;       \n;Waits
+\c;\l;move\u cbot\move;       \n;Moves forward or backward
+\c;\l;turn\u cbot\turn;       \n;Turns
+\c;\l;goto\u cbot\goto;       \n;Goes to a given position
+\c;\l;motor\u cbot\motor;      \n;Direct motor control
+\c;\l;jet\u cbot\jet;        \n;Direct jet engine control
+\c;\l;message\u cbot\message;    \n;Displays a message
+\c;\l;retobject\u cbot\retobj;  \n;Returns an object from a function
+\c;\l;errmode\u cbot\errmode;    \n;Error treatement control
+\c;\l;abstime\u cbot\abstime;    \n;Returns the absolute time
+\c;\l;pendown\u cbot\pendown;    \n;Starts drawing
+\c;\l;penup\u cbot\penup;      \n;Stops drawing
+\c;\l;pencolor\u cbot\pencolor;   \n;Changes the pen color
+\c;\l;penwidth\u cbot\penwidth;   \n;Changes the pen width
+\c;\l;factory\u cbot\factory;    \n;Starts construction of a bot
+\c;\l;research\u cbot\research;   \n;Starts a research
+\c;\l;takeoff\u cbot\takeoff;    \n;Launches a spaceship
+\c;\l;isbusy\u cbot\isbusy;     \n;Checks if object is busy
+\c;\l;canresearch\u cbot\canresearch;\n;Checks if a technology can be researched
+\c;\l;researched\u cbot\researched; \n;Checks if a technology is researched
+\c;\l;canbuild\u cbot\canbuild;   \n;Checks if a building can be built
+\c;\l;buildingenabled\u cbot\buildingenabled; \n;Checks if a building is available during current mission
+
+\t;Инструкции о топологии:
+\c;\l;space\u cbot\space;      \n;Вычисляет свободное пространство
+\c;\l;flatspace\u cbot\flatspace;  \n;Вычисляет свободное, ровное пространство
+\c;\l;topo\u cbot\topo;       \n;Возвращает высоту точки
+\c;\l;flatground\u cbot\flatgrnd; \n;Возвращает радиус плоской области
+
+\t;Специальные инструкции для некоторых ботов:
+\c;\l;grab\u cbot\grab;       \n;Picks up an object
+\c;\l;drop\u cbot\drop;       \n;Puts down an object
+\c;\l;sniff\u cbot\sniff;      \n;Sounds the subsoil
+\c;\l;thump\u cbot\thump;      \n;Overturns alien insects
+\c;\l;recycle\u cbot\recycle;    \n;Recycles a derelict bot
+\c;\l;shield\u cbot\shield;     \n;Extends or withdraws the shield
+\c;\l;fire\u cbot\fire;       \n;Fires the cannon
+\c;\l;aim\u cbot\aim;        \n;Rotates the cannon
+\c;\l;build\u cbot\build;      \n;Builds a building
+\c;\l;flag\u cbot\flag;       \n;Plants a flag
+\c;\l;deflag\u cbot\deflag;     \n;Removes a flag
+
+\t;Специальные инструкции по обмену сообщениями:
+\c;\l;receive\u cbot\receive;    \n;Получает информацию
+\c;\l;send\u cbot\send;       \n;Посылает новую информацию
+\c;\l;testinfo\u cbot\testinfo;   \n;Проверяет существует ли информация
+\c;\l;deleteinfo\u cbot\delinfo; \n;Удаляет существующую информацию
+
+
+\t;Специальные инструкции для классов:
+\c;\l;class\u cbot\class;      \n;Class declararion
+\c;\l;public\u cbot\public;     \n;Declares a public class member
+\c;\l;private\u cbot\private;    \n;Declares a private class member
+\c;\l;protected\u cbot\protected;  \n;Declares a protected class member
+\c;\l;static\u cbot\static;     \n;Declares a static class member
+\c;\l;synchronized\u cbot\synchro; \n;Prevents simultaneous execution
+\c;\l;new\u cbot\new;        \n;Creates a new instance
+\c;\l;this\u cbot\this;       \n;Reference to the current instance
+\c;\l;extends\u cbot\extends;    \n;Extends a class
+\c;\l;super\u cbot\super;      \n;Grants access to the parent class
+
+\t;Специальные инструкции для строк:
+\c;\l;strlen\u cbot\strlen;     \n;Получает длину строки
+\c;\l;strleft\u cbot\strleft;    \n;Извлекает левую часть
+\c;\l;strright\u cbot\strright;   \n;Извлекает правую часть
+\c;\l;strmid\u cbot\strmid;     \n;Извлекает центральную часть
+\c;\l;strfind\u cbot\strfind;    \n;Находит подстроку.
+\c;\l;strval\u cbot\strval;     \n;Конвертирует строку в число
+\c;\l;strupper\u cbot\strupper;   \n;Конвертирует в верхний регистр
+\c;\l;strlower\u cbot\strlower;   \n;Конвертирует в нижний регистр
+
+\t;Специальные инструкции для файлов:
+\c;\l;open\u cbot\open;       \n;Открывает файл
+\c;\l;close\u cbot\close;      \n;Закрывает файл
+\c;\l;writeln\u cbot\writeln;    \n;Записывает строку в файл
+\c;\l;readln\u cbot\readln;     \n;Читает строку из файла
+\c;\l;eof\u cbot\eof;        \n;Проверяет достугнут ли конец файла
+\c;\l;deletefile\u cbot\deletef; \n;Удаляет файл
+
+\t;Математические функции:
+\c;\l;rand\u cbot\rand;       \n;Возвращает случайное число
+\c;\l;pow\u cbot\pow;        \n;Возвращает степень числа
+\c;\l;sqrt\u cbot\sqrt;       \n;Вовращает квадратный корень
+\c;\l;floor\u cbot\floor;      \n;Возвращает предыдущее целое число
+\c;\l;ceil\u cbot\ceil;       \n;Возвращает наименьшее следующее целое число
+\c;\l;round\u cbot\round;      \n;Возвращает округленное число
+\c;\l;trunc\u cbot\trunc;      \n;Возвращает усеченное число
+\c;\l;sin\u cbot\sin;        \n;Возвращает синус
+\c;\l;cos\u cbot\cos;        \n;Возвращает косинус
+\c;\l;tan\u cbot\tan;        \n;Возвращает тангенс
+\c;\l;asin\u cbot\asin;       \n;Возвращает арксинус
+\c;\l;acos\u cbot\acos;       \n;Возвращает арккосинус
+\c;\l;atan\u cbot\atan;       \n;Возвращает арктангенс
+\c;\l;atan2\u cbot\atan2;      \n;Возвращет арктангенс, имеет два аргумента
+
+\t;См. также
+\l;Типы\u cbot\type; и \l;категории\u cbot\category;.

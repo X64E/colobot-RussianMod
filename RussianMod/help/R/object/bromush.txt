@@ -1,0 +1,9 @@
+\b;Brown Mushroom
+\image bromush 8 8;
+The growth of these harmless brown mushrooms signifies the presence of \l;uranium ore\u object\uranore; in the subsoil. Use a \l;sniffer\u object\botsr; in order to confirm that.
+
+\t;Объект \l;Категория\u cbot\category;
+\c;BrownMushroom\n;
+
+\t;Смотри также
+\l;Язык CBOT\u cbot;, \l;Переменные\u cbot\type; и \l;Категории\u cbot\category;.

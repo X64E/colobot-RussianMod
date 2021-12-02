@@ -1,0 +1,9 @@
+\b;Target1
+\image target1 8 8;
+Эти здания появляются в миссиях по тренировочным полетам и их высота может изменяться. В центре расположена \l;Target2\u object\target2;.
+
+\t;Объект \l;Категория\u cbot\category;
+\c;Target1\n;
+
+\t;Смотри также
+\l;Язык CBOT\u cbot;, \l;Переменные\u cbot\type; и \l;Категории\u cbot\category;.

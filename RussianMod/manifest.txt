@@ -1,0 +1,6 @@
+DisplayName.E text="Russian translate"
+DisplayName.R text="Улучшенный перевод на Русский"
+Author text=""
+Version major=0 minor=1 patch=0
+Summary.E text="Russian translation mod."
+Summary.R text="Содержит более качественный перевод текстов игры на Русский язык."
