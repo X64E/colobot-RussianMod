@@ -1,0 +1,30 @@
+\b;Значения \c;Имена исследований\n;
+Research names represent the types of available researches in the CBOT language. You can use them to control \l;ResearchCenter\u object\research; by passing them to appropriate instructions (e.g. \l;research\u cbot\research;, \l;canresearch\u cbot\canresearch;, \l;researched\u cbot\researched;).
+
+In a program, research names are always displayed on a \const;red background\norm;. If a research name is not highlighted in red, it is misspelled. Caps and lower cases should be kept as is.
+
+Below are the different research names available.
+
+\t;Сделано с помощью \l;ResearchCenter\u object\research;:
+\c;\const;ResearchTracked\norm;       \n;Tracked bots (e.g. \l;tracked grabber\u object\botgc;)
+\c;\const;ResearchWinged\norm;        \n;Winged bots (e.g. \l;winged grabber\u object\botgj;)
+\c;\const;ResearchShooter\norm;       \n;\l;Fireball cannon\u object\botfr;
+\c;\const;ResearchDefenseTower\norm;  \n;\l;Defense tower\u object\tower;
+\c;\const;ResearchNuclearPlant\norm;  \n;\l;Nuclear plant\u object\nuclear;
+\c;\const;ResearchThumper\norm;       \n;\l;Thumper\u object\bottump;
+\c;\const;ResearchShielder\norm;      \n;\l;Shielder\u object\botshld;
+\c;\const;ResearchPhazerShooter\norm; \n;\l;Phazer cannon\u object\botphaz;
+\c;\const;ResearchBuilder\norm;       \n;\l;Neutron gun\u object\botbr;
+
+\t;Сделано с помощью \l;AutoLab\u object\labo;:
+\c;\const;ResearchTarget\norm;        \n;\l;Target bot\u object\bottarg;
+\c;\const;ResearchLegged\norm;        \n;Legged bots (e.g. \l;legged grabber\u object\botgs;)
+\c;\const;ResearchOrgaShooter\norm;   \n;\l;Orgaball cannon\u object\botor;
+
+\t;Невозможно исследовать:
+\c;\const;ResearchSniffer\norm;       \n;\l;Sniffer\u object\botsr;
+\c;\const;ResearchSubber\norm;        \n;\l;Subber\u object\botsub;
+\c;\const;ResearchRecycler\norm;      \n;\l;Recycler\u object\botrecy;
+
+\t;См. также
+\l;CBOT Language\u cbot;, \l;Variables\u cbot\type; and \l;Categories\u cbot\category;.

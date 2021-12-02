@@ -1,0 +1,15 @@
+\b;Инструкция \c;pow\n;
+Синтаксис:
+\s;\c;pow ( x, y );\n;
+
+\t;x: \c;\l;float\u cbot\float;\n;
+Base.
+
+\t;y: \c;\l;float\u cbot\float;\n;
+Экспонента.
+
+\t;Возвращаемое значение: \c;\l;float\u cbot\float;\n;
+x to the y (x raised to the yth power).
+
+\t;См. также
+\l;Программирование\u cbot;, \l;типы\u cbot\type; и \l;выражения\u cbot\expr;.

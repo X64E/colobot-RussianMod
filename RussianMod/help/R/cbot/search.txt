@@ -1,0 +1,27 @@
+\b;Инструкция \c;search\n;
+Синтаксис:
+\s;\c;search ( категория, позиция );\n;
+
+Обнаруживет объект заданной категории который является ближайшим к данному местоположению. Подобно \c;\l;radar();\u cbot\radar;\n;, но может искать начиная с заданной точки вместо с поиска с текущего местоположения бота.
+
+\t;категория: \c;\l;int\u cbot\int;\n;
+o \l;Category\u cbot\category; of the objects that should be detected. For example, when you are looking for an ant, write \c;search(AlienAnt)\n;. 
+o \l;Массив\u cbot\array; категорий объектов которые должны быть обнаружены. Например, когда вы ищите только сборщиков, начиная с некоторой точки уровня:
+\c;\s;int bots[4];
+\s;bots[0] = WheeledGrabber;
+\s;bots[1] = TrackedGrabber;
+\s;bots[2] = WingedGrabber;
+\s;bots[3] = LeggedGrabber;
+\s;point p(50, 24, 0);
+\s;object grabberNearestThePoint = search(bots, p);\n;
+o Keyword \const;Any\norm; if you are looking for any object (including even plants and so on).
+
+\t;position: \c;\l;point\u cbot\point;\n; (default value: \c;\l;this\u cbot\this;.\l;position\u cbot\object;\n;)
+\c;search\n; возвращает объект указанной категории, который ближе всего к указанной здесь позиции.
+
+\t;Возвращаемое значение: \c;\l;object\u cbot\object;\n;
+Характеристики объекта, который был найден. Значение \c;\l;null\u cbot\null;\n; означает, что объект этой категории найден не был.
+
+\t;См. также
+\l;Программирование\u cbot;, \l;типы\u cbot\type; и \l;категории\u cbot\category;.
+

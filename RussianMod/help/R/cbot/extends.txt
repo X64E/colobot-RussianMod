@@ -1,0 +1,107 @@
+\b;Ключевое слово \c;extends\n;
+Это ключевое слово используется в определении \c;\l;class\u cbot\class;\n; когда мы хотим чтобы класс наследовал члены от другого класса. Класс, который расширен, мы обычно называем родителем или базовым классом, а расширяющий класс мы называем ребенком.
+
+\t;Пример
+\c;
+\s;public class Parent
+\s;{
+\s;	void foo()
+\s;	{
+\s;		message("foo");
+\s;	}
+\s;}
+\s;
+\s;public class Child extends Parent
+\s;{
+\s;	void bar()
+\s;	{
+\s;		message("bar");
+\s;	}
+\s;}
+\s;
+\s;extern void object::Test()
+\s;{
+\s;	Child child();
+\s;	child.foo(); // Will show "foo"
+\s;	child.bar(); // Will show "bar"
+\s;}
+\n;
+
+\b;Наследованные Методы
+Только \c;\l;public\u cbot\public;\n; и \c;\l;protected\u cbot\protected;\n; метода наследуются. \c;\l;private\u cbot\private;\n; члены напрямую недоступны даже для ребенка, хотя они могут быть доступны косвенно через наследованные методы.
+
+Конструкторы и деструкторы не наследуются, однако они могут быть перегружены.
+
+\b;Method Overriding
+Наследованные методы могут быть переопределены в определении класса ребенка. Например:
+\c;
+\s;public class Parent
+\s;{
+\s;	void foo()
+\s;	{
+\s;		message("foo");
+\s;	}
+\s;}
+\s;
+\s;public class Child extends Parent
+\s;{
+\s;	void foo()
+\s;	{
+\s;		message("bar");
+\s;	}
+\s;}
+\s;
+\s;extern void object::Test()
+\s;{
+\s;	Child child();
+\s;	child.foo(); // Will show "bar"
+\s;}
+\n;
+Родительский метод может быть вызван внутри перегруженного метода используя ключевое слово \c;\l;super\u cbot\super;\n;.
+
+\b;Полиморфизм
+\c;\l;Ссылка\u cbot\pointer;\n; типа Родитель может указывать на объект типа Ребенок. Однако, такой указатель не может использоватсья для доступа к члену ребенка. Для того чтобы получить доступ к члену ребенка, надо быть уверенным, чтобы ссылка на Родитель действительно указывает на объект Ребенка. Если это именно такой случай, то она может быть безопасно скопирована в указатель типа Ребенок, который имеет доступ к членам ребенка.
+
+\t;Пример
+\c;
+\s;public class Parent
+\s;{
+\s;	void foo()
+\s;	{
+\s;		message("foo");
+\s;	}
+\s;}
+\s;
+\s;public class Child extends Parent
+\s;{
+\s;	void foo()
+\s;	{
+\s;		message("bar");
+\s;	}
+\s;	void bar()
+\s;	{
+\s;		message("foo bar");
+\s;	}
+\s;}
+\s;
+\s;extern void object::Test()
+\s;{
+\s;	Parent people[2];
+\s;	people[0] = new Parent();
+\s;	people[1] = new Child();
+\s;	for (int i = 0; i < 2; ++i)
+\s;	{
+\s;		people[i].foo();
+\s;	}
+\s;	//people[1].bar(); // Error
+\s;	Child child = people[1];
+\s;	child.bar(); // OK
+\s;}
+\n;
+
+\b;Множественное Наследование
+Ребенок не может иметь несколько родителей, но, родетель может иметь много детей.
+
+\t;См. также
+\c;\l;class\u cbot\class;\n;, \c;\l;public\u cbot\public;\n;, \c;\l;private\u cbot\private;\n;, \c;\l;protected\u cbot\protected;\n;, \c;\l;new\u cbot\new;\n;, \c;\l;reference\u cbot\pointer;\n;, \c;\l;this\u cbot\this;\n;, \c;\l;super\u cbot\super;\n;
+\l;Programming\u cbot;, \l;types\u cbot\type; and \l;categories\u cbot\category;.

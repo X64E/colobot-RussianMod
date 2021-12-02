@@ -1,0 +1,71 @@
+\b;Инструкции \c;switch\n;, \c;case\n; и \c;default\n;
+С инструкцией \c;switch() {}\n; вы можете выполнить подходящий набор инструкций (case) на сновании значения.
+
+\b;Основное использование
+Заметьте: инструкция \l;isbusy\u cbot\isbusy; может быть лучше использована в этом сценарии.
+
+See the following \l;function\u cbot\function;: the bot will be \l;waiting\u cbot\wait; a proper amount of time for a certain task to be completed:
+\c;
+\s;public void WaitForTaskCompleted(object building)
+\s;{
+\s;	int cat = building.category;
+\s;	\l;if\u cbot\if; (cat == Converter) wait(15);
+\s;	else if (cat == BotFactory) wait(15);
+\s;	else if (cat == PowerPlant) wait(12);
+\s;	else message("Undefined wait time", DisplayError);
+\s;}
+\n;
+Эта функция может быть также написана используя инструкцию \c;switch() {}\n;:
+\c;
+\s;public void WaitForTaskCompleted(object building)
+\s;{
+\s;	switch (building.category)
+\s;	{
+\s;		case Converter: wait(15); break;
+\s;		case BotFactory: wait(15); break;
+\s;		case PowerPlant: wait(12); break;
+\s;		default: message("Undefined wait time", DisplayError);
+\s;	}
+\s;}
+\n;
+Which way to write this kind of choice structures, is a matter of taste.
+
+Вы также можете сделать таким образом:
+\c;
+\s;switch (building.category)
+\s;{
+\s;	case Converter:
+\s;	case BotFactory:
+\s;		wait(15); break;
+\s;	case PowerPlant: wait(12); break;
+\s;	default: message("Undefined wait time", DisplayError);
+\s;}
+\n;
+\l;Converter\u object\convert; and \l;bot factory\u object\factory; have the same waiting time, so in order to not write the same instructions twice, we made multiple cases run the same code. In fact, all code after the highest case used will be executed if we do not \c;\l;break\u cbot\break;\n; it.
+
+\b;Для специалистов
+Синтаксис:
+\s;\c;switch ( value )
+\s;{
+\s;	case value1: instructions1
+\s;	case value2: instructions2
+\s;	...
+\s;	case valueN: instructionsN
+\s;	default: instructionsDefault
+\s;}
+\n;
+С условной структурой вы можете выполнить \c;instructions1\n; или \c;instructions2\n; ... или \c;instructionsN\n; или \c;instructionsDefault\n; в зависмости от \c;value\n;.
+
+If the \c;value\n; is equal to \c;value1\n;, \c;instructions1\n; to \c;N\n; (including \c;instructionsDefault\n;) are executed.
+If the \c;value\n; is equal to \c;value2\n;, \c;instructions2\n; to \c;N\n; (including \c;instructionsDefault\n;) are executed.
+And so on.
+If the \c;value\n; is equal to \c;valueN\n;, \c;instructionsN\n; and \c;instructionsDefault\n; are executed.
+If the \c;value\n; is not equal to any value in the given cases, \c;instructionsDefault\n; are executed.
+
+Вы можете выйти из инструкции \c;switch() {}\n; используя \c;\l;break\u cbot\break;\n;.
+
+\t;Внимание
+Не ставьте \l;точку с запятой\u cbot\term; в конце инструкции \c;switch ( ) { }\n;.
+
+\t;См. также
+\l;Программирование\u cbot;, \l;типы\u cbot\type; и \l;категории\u cbot\category;.

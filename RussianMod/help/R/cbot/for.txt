@@ -1,0 +1,53 @@
+\b;Инструкция \c;for\n;
+Синтаксис:
+\s;\c;for ( before ; condition ; end )
+\s;{
+\s;	\n;Инструкции...\c;
+\s;}
+\n;
+Эта инструкция позволяет вам выполнять инструкции содержащиеся в \l;блоке\u cbot\bloc; определенное количество раз.
+
+\t;\c;before\n;
+This set of instructions is executed before the first loop instance.
+
+\t;\c;условие\n;
+Это \l;условие\u cbot\cond; определяет, нужно ли выполнять следующее кольцо цикла. Она проверяется в ходе выполнения каждого кольца.
+
+\t;\c;end\n;
+This set of instructions is executed at the end of every instance of the loop. 
+
+Example: count from 1 to 4
+\c;\s;\c;for ( i = 1 ; i <= 4 ; i++ )
+\s;{
+\s;	message(i) ;
+\s;}
+\n;
+Этот пример строго эквивалентен циклу \c;for\n;, но он использует инструкцию \c;\l;while\u cbot\while;\n;:
+\s;\c;before;
+\s;while ( condition )
+\s;{
+\s;	\n;Instructions ...\c;
+\s;	end;
+\s;}
+\n;
+\t;Внимание
+не следует ставить \l;двоеточие\u cbot\term; в конце строки оператора \c;for ( )\n;.
+
+Инструкции \c;\l;break\u cbot\break;\n; и \c;\l;continue\u cbot\continue;\n; могут быть полезными внутри блока после инструкции \c;for \n;.
+
+\t;Executing more instructions
+In the \c;before\n; and \c;end\n; part of a \c;for\n; loop you can specify more than one instruction by using comma. Example:
+\c;
+\s;int i = 0;
+\s;int j;
+\s;for (i++, j = 2; i < 3 && j > 0; i++, j--)
+\s;{
+\s;    message(i);
+\s;    message(j);
+\s;}
+\n;
+Вышеприведенный код выводит \c;1 2 2 1\n;.
+
+\t;См. также
+\l;Программирование\u cbot;, \l;типы\u cbot\type; и \l;категории\u cbot\category;.
+

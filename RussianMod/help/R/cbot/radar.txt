@@ -1,0 +1,82 @@
+\b;Инструкция \c;radar\n;
+С инструкцией  \c;radar();\n; вы можете находить объекты такие как \l;враги\u object\mother;, боты, здания или сырье.
+
+\b;Основное использование
+В скобках напишите \l;название объекта\u cbot\category;, который вы ищете. Поместите результат в переменную \l;типа\u cbot\type; \c;объекта\n;. Вот пример поиска ближайшего муравья:
+\c;
+\s;// В начале программы:
+\s;object  item; // объявление переменной
+\s;
+\s;// Поиск ближайшего муравья
+\s;item = radar(AlienAnt);
+\n;
+\b;Для специалистов
+Синтаксис:
+\s;\c;radar ( cat, angle, focus, min, max, sens, filter );\n;
+
+Обнаруживает объект в соответствии с несколькими параметрами.
+
+\image radar1 8 8;
+Как видно выше, пурпурная зона соответствует зоне, где будут обнаружены объекты.
+
+\t;cat: \c;\l;int\u cbot\int;\n;
+o \l;Категория\u cbot\category; объектов, которые должны быть найдены. Например, когда вы ищите муравья, напришите \c;radar(AlienAnt)\n;. 
+o \l;Array\u cbot\array; of categories of the objects that should be detected. For example, when you are looking only for grabbers:
+\c;\s;int bots[4];
+\s;bots[0] = WheeledGrabber;
+\s;bots[1] = TrackedGrabber;
+\s;bots[2] = WingedGrabber;
+\s;bots[3] = LeggedGrabber;
+\s;object nearestGrabber = radar(bots);\n;
+o Keyword \const;Any\norm; if you are looking for any object (including even plants and so on). Filters may be useful to use with this keyword.
+
+\t;angle: \c;\l;float\u cbot\float;\n; (default value: \c;0\n;)
+Направление, в котором смотрит радар, в градусах.
+\c;  0\n; -> радар смотрит прямо вперед
+\c;-90\n; -> радар смотрит на четверть круга вправо
+\c; 90\n; -> радар смотрит на четверть круга влево
+
+\t;focus: \c;\l;float\u cbot\float;\n; (default value: \c;360\n;)
+Угол раскрытия радара в градусах.
+
+\t;min: \c;\l;float\u cbot\float;\n; (default value: \c;0\n;)
+Минимальное расстояние обнаружения в метрах. Объекты, которые находятся на расстояниях меньших, чем минимальное расстояние, обнаружены не будут.
+
+\t;max: \c;\l;float\u cbot\float;\n; (default value: \c;1000\n;)
+Максимальное расстояние обнаружения в метрах. Объекты, которые находятся на расстояниях, больше максимального расстояния, обнаружены не будут.
+
+\t;sens: \c;\l;float\u cbot\float;\n; (default value: \c;1\n;)
+Определяет каким образом будут обнаруживаться объекты. Если его значение \c;1\n;, то будет возвращен ближайший объект в указанной зоне. Если значение \c;-1\n;, то будет возвращен самый дальний объект в зоне обнаружения.
+
+\t;filter: \c;\l;int\u cbot\int;\n; (default value: \c;\const;FilterNone\norm;\n;)
+Определяет какой тип объектов должен быть найден. Особенно пользно в использовани с  \l;array\u cbot\array; или \const;Any\norm;. Следующие фильтры доступны:
+
+\c;\const;FilterNone\norm;        \n;Detects everything (default)
+\c;\const;FilterOnlyLanding\norm; \n;Detects only objects being on the ground
+\c;\const;FilterOnlyFlying\norm;  \n;Detects only objects not being on the ground
+\c;\const;FilterFriendly\norm;    \n;Detects only allies (objects in the same team)
+\c;\const;FilterEnemy\norm;       \n;Detects only enemies (objects in an other team except neutral)
+\c;\const;FilterNeutral\norm;     \n;Detects only neutral objects (e.g. resources)
+
+The last three are mainly useful in \l;code battles\u battles;. You can also pass a team ID to search only for objects from a specific team. Attention: you should use \const;FilterNeutral\norm; instead of \c;0\n; or else it will not work.
+
+Filters and IDs can be mixed using bitwise OR operator \c;|\n;, for example \c;radar(Any, 0, 360, 0, 1000, 1, 2 | FilterOnlyLanding);\n; will only detect an object from team \c;2\n; that is on the ground. Attention: you can specify only one team ID at once, but you can specify several filters at once.
+
+\t;Возвращаемое значение: \c;\l;object\u cbot\object;\n;
+Возвращает первый найденный объект, который соответствует указанной категории в указанной зоне. Если объект найден не был, то возвращается значение \c;\l;null\u cbot\null;\n;.
+
+\t;Замечание
+Вы не должны указывать все параметры. Вот два примера эквивалентных инструкций:
+\c;
+\s;	radar(Titanium, 0, 360, 0, 1000);
+\s;	radar(Titanium);  // эквивалентна предыдущей
+
+\s;	radar(Titanium, 0, 90, 0, 1000);
+\s;	radar(Titanium, 0, 90);  // эквивалентна предыдущей
+\n;
+Когда не определен один или более параметров, то используются указанные выше значения по умолчанию; обязателен только первый параметр.
+Обычно указывается только первый параметр: например \c;radar (AlienAnt)\n; обнаружит ближайшего муравья, где бы он ни был.
+
+\t;См. также
+\c;\l;radarall\u cbot\radarall;();\n;, \l;programming\u cbot;, \l;types\u cbot\type; and \l;categories\u cbot\category;.
+

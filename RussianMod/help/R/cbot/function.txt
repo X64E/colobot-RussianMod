@@ -1,0 +1,166 @@
+\b;Функции
+Функция, проще, это инструкция созданная вами.
+
+\b;Функция main
+Вы уже знаете как создать функцию. Каждая программа в CBOT должна иметь функцию main, которая выглядит следующим образом:
+\c;
+\s;extern void object::ProgramName()
+\s;{
+\s;	
+\s;	// instructions
+\s;	
+\s;}
+\n;
+Ничего кроме имени может быть изменено в главной функции. Ключевое слово \c;\l;extern\u cbot\extern;\n; отличает главную функцию от других.
+
+\b;Основное использование
+С помощью функций вы можете разделить вашу программу на несколько частей. Каждая из них будет выполнять определенную задачу. Например, посмотрите следующую программу:
+\c;
+\s;extern void object::Remote()
+\s;{
+\s;	send("order", 1, 100);
+\s;	wait(5);
+\s;	send("order", 3, 100);
+\s;	wait(5);
+\s;	send("order", 2, 100);
+\s;	wait(5);
+\s;	send("order", 4, 100);
+\s;	wait(5);
+\s;}
+\n;
+\c;\l;send\u cbot\send;\n; and \c;\l;wait\u cbot\wait;\n; are repeated several times. So it would be a good thing if we created a function that executes these two instructions:
+\c;
+\s;void SendToPost(float op)
+\s;{
+\s;	send("order", op, 100);
+\s;	wait(5);
+\s;}
+\s;
+\s;extern void object::Remote()
+\s;{
+\s;	SendToPost(1);
+\s;	SendToPost(3);
+\s;	SendToPost(2);
+\s;	SendToPost(4);
+\s;}
+\n;
+Now the program is much easier to read. It is a good practice to split the program into several functions with self-describing names.
+
+\b;Синтаксис
+\c;
+\s;result_type FunctionName(optional_parameters)
+\s;{
+\s;	body
+\s;}
+\n;
+Result \l;type\u cbot\type; should be \l;void\u cbot/void; if the function does not give any. Body is just a set of instructions. Function name must be created with the exact same rules applied to \l;variables\u cbot\var;.
+
+\t;Parameters
+Функция может иметь параметры:
+\c;
+\s;void Example(int a, float x, string s)
+\s;{
+\s;	message(a);
+\s;	message(x);
+\s;	message(s);
+\s;}
+\n;
+The \c;Example\n; function will receive an \l;integer\u cbot\int; \c;a\n;, a \l;floating point number\u cbot\float; \c;x\n; and a \l;string\u cbot\string; \c;s\n;. Parameters are "passed by value", that is the values of parameter variables in a function are copies of the values the caller specified as variables. If you pass an \c;\l;int\u cbot\int;\n; to a function, its parameter is a copy of whatever value was being passed as the argument, and the function can change its parameter value without affecting values in the code that invoked the function.
+
+If you pass a \l;class\u cbot\class; instance or an \l;array\u cbot\array; as parameter to a function, the function only receives a \l;reference\u cbot\pointer; to the instance or the array. That means if you modify the instance or the array in the function, the instance or the array that has been specified by the caller will be actually modified.
+
+\t;Результат
+A function can also return a result with the \c;\l;return\u cbot\return;\n; instruction. Therefore the function must be declared no longer as \c;\l;void\u cbot\void;\n; but as an other \l;type\u cbot\type;:
+\c;
+\s;float Average(float a, float b)
+\s;{
+\s;	return (a+b)/2;
+\s;}
+\s;
+\s;extern void object::Test( )
+\s;{
+\s;	float value;
+\s;	value = Average(2, 6);
+\s;	message(value);  // will display 4
+\s;}
+\n;
+Некоторые другие примеры:
+\c;
+\s;float Pi()
+\s;{
+\s;	return 3.1415;
+\s;}
+\s;
+\s;string Sign(float a)
+\s;{
+\s;	if (a > 0)  return "positive";
+\s;	if (a < 0)  return "negative";
+\s;	return "null";
+\s;}
+\n;
+
+\b;Перегрузка
+Вы можете объявить несколько функций с одинаковыми именами, но разными параметрами:
+\c;
+\s;float Pythagoras(float a, float b)
+\s;{
+\s;	return sqrt((a*a)+(b*b));
+\s;}
+\s;
+\s;float Pythagoras(float a, float b, float c)
+\s;{
+\s;	return sqrt((a*a)+(b*b)+(c*c));
+\s;}
+\n;
+CBOT будет вызывать одну или другую функцию в зависимости от переданных параметров. Они должны быть различимыми. То есть вы не можете объявить две функции с одним именем и типами параметров в том же самом порядке. Например объявление \c;int Pythagoras(float b, float a)\n; приведет к ошибке. Заметьте, что это не относится к типу возвращаемого значения.
+
+\b;Публичные Функции
+Вы также можете объявить функцию \l;public\u cbot\public; тогда она может быть использована другими ботами.
+
+\b;object::
+Declaring a function as a part of the \l;object\u cbot\object; namespace gives it access to \c;\l;this\u cbot\this;\n; \l;pointer\u cbot\pointer;, in other words, to all available properties of the robot which the program is run on.
+\c;
+\s;void object::Example()
+\s;{
+\s;	message(this.category);
+\s;}
+\n;
+
+\b;Параметры по умолчанию
+Последние параметры функции могут иметь параметры по умолчанию, которые можно опустить, когда вызывается функция.
+\c;
+\s;float Add(float a = 0.0, float b = 0.0)
+\s;{
+\s;	return a + b;
+\s;}
+\s;
+\s;// Somewhere in the main program...
+\s;Add(); // Will return 0.0
+\s;Add(2.0); // Will return 2.0
+\s;Add(2.0, 3.0); // Will return 5.0
+\s;// ...
+\n;
+
+\t;Параметры по умолчанию и Перегрузка
+Функции с параметрами по умолчанию все еще могут быть перегружены, нужно только быть уверенным, что вызовы функций не двусмысленны. Например, рассмотрим следующий код: 
+\c;
+\s;float Add(float a = 0.0, float b = 0.0)
+\s;{
+\s;	return a + b;
+\s;}
+\s;
+\s;string Add(string a = "", string b = "")
+\s;{
+\s;	return a + b;
+\s;}
+\s;
+\s;// Somewhere in the main program...
+\s;Add(); // Compilation error: ambiguous call
+\s;Add(""); // Ok
+\s;Add(0.0); // Ok
+\s;// ...
+\n;
+Заметьте, что в вышеприведенном примере, перегрузка приводит к тому, что первый параметр по умолчанию становится бесполезным, т.к. вызывающий должен передать его в любом случае для того, чтобы можно было отличить две функции.
+
+\t;См. также
+\l;Программирование\u cbot;, \l;типы\u cbot\type; и \l;категории\u cbot\category;.

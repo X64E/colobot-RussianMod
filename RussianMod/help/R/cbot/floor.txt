@@ -1,0 +1,13 @@
+\b;Инструкция \c;floor\n;
+Синтаксис:
+\s;\c;floor ( value );\n;
+Rounds down a number.
+
+\t;значение: \c;\l;float\u cbot\float;\n;
+Число.
+
+\t;Возвращаемое значение: \c;\l;float\u cbot\float;\n;
+Floor of the value, i.e. the largest integer not greater than \c;value\n;. For example, \c;floor(2.9)\n; is \c;2.00\n;.
+
+\t;См. также
+\l;round\u cbot\round;, \l;programming\u cbot;, \l;types\u cbot\type; and \l;expressions\u cbot\expr;.

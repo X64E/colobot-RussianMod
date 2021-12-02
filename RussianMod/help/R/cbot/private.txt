@@ -1,0 +1,21 @@
+\b;Инструкция \c;private\n; (for specialists)
+This is an access modifier for \l;class\u cbot\class; members. Private members are not accessible outside of the class definition.
+
+\t;Пример
+\c;
+\s;public class MyClass
+\s;{
+\s;	int    b;                // общедоступна по-умолчанию
+\s;	public int a;            // всегда общедоступна
+\s;	private point position;  // локальная/личная
+\s;}
+\s;void Test()
+\s;{
+\s;	MyClass item;
+\s;	item.a = item.b = 12;      // ок
+\s;	message( item.position );  // это ошибка
+\s;}
+\n;
+\t;См. также
+\c;\l;class\u cbot\class;\n;, \c;\l;public\u cbot\public;\n;, \c;\l;protected\u cbot\protected;\n;
+\l;Programming\u cbot;, \l;types\u cbot\type; and \l;categories\u cbot\category;.

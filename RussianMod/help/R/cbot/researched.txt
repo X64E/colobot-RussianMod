@@ -1,0 +1,16 @@
+\b;Инструкция \c;researched\n;
+Синтаксис:
+\s;\c;researched ( research );\n;
+
+Checks if a \l;research\u cbot\researches; is done.
+
+\t;research: \c;\l;int\u cbot\int;\n;
+\l;Имя исследования\u cbot\researches;.
+
+\t;Возвращаемое значение: \c;\l;bool\u cbot\bool;\n;
+\const;true\norm; if the research is done
+\const;false\norm; if the research is not done
+
+\t;См. также
+\l;Research names\u cbot\researches;, \c;\l;research\u cbot\research;\n;, \c;\l;canresearch\u cbot\canresearch;\n;, \c;\l;canbuild\u cbot\canbuild;\n;.
+\l;Programming\u cbot;, \l;types\u cbot\type; and \l;categories\u cbot\category;.

@@ -1,0 +1,12 @@
+\b;Инструкция \c;openfile\n;
+\c;openfile();\n; opens an text file in the files/ folder. This is not a method of the \c;\l;file\u cbot\file;\n; class but openfile returns a \l;reference\u cbot\pointer; to a new instance of the file class. You must supply two parameters, the filename and the opening mode.
+\c;
+\s;file handle = openfile("filename", "r");
+\n;
+\c;"r"\n; режим: открыть для чтения.
+\c;"w"\n; режим: открыть для записи.
+\c;"w"\n; режим: открыть для добавления.
+
+
+\t;См. также
+\l;Программирование\u cbot;, \l;типы\u cbot\type; и \l;категории\u cbot\category;.
