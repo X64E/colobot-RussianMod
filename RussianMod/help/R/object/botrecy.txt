@@ -7,8 +7,8 @@
 
 Чтобы запрограммировать утилизатор используйте \c;\l;recycle\u cbot\recycle;\n;.
 
-\t;Объект \l;Категория\u cbot\category;
+\t;Название \l;категории\u cbot\category; объекта
 \c;RecyclerBot\n;
 
 \t;Смотрите также
-\l;Язык CBOT\u cbot;, \l;Переменные\u cbot\type; и \l;Категории\u cbot\category;.
+\l;Язык CBOT\u cbot;,  \l;категории\u cbot\category; и \l;свойства объекта\u cbot\object;.

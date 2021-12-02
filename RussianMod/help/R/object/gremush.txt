@@ -2,8 +2,8 @@
 \image gremush 8 8;
 These poisonous green mushrooms spew tiny corrosive balls upon being approached. It is recommended not to get any closer than 12 meters unless protected by a \l;shielder\u object\botshld;.
 
-\t;Объект \l;Категория\u cbot\category;
+\t;Название \l;категории\u cbot\category; объекта
 \c;GreenMushroom\n;
 
-\t;Смотри также
-\l;Язык CBOT\u cbot;, \l;Переменные\u cbot\type; и \l;Категории\u cbot\category;.
+\t;Смотрите также
+\l;Язык CBOT\u cbot;,  \l;категории\u cbot\category; и \l;свойства объекта\u cbot\object;.

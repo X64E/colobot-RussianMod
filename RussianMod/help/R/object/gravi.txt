@@ -2,8 +2,8 @@
 \image gravi 8 8;
 Gravi-plants generate a 25-meter radius green energy field that pushes \l;you\u object\human; and your bots downwards, making flight impossible.
 
-\t;Объект \l;Категория\u cbot\category;
+\t;Название \l;категории\u cbot\category; объекта
 \c;GraviPlant\n;
 
-\t;Смотри также
-\l;Язык CBOT\u cbot;, \l;Переменные\u cbot\type; и \l;Категории\u cbot\category;.
+\t;Смотрите также
+\l;Язык CBOT\u cbot;,  \l;категории\u cbot\category; и \l;свойства объекта\u cbot\object;.

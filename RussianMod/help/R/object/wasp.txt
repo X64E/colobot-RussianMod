@@ -4,8 +4,8 @@
 
 Легче всего избавиться от них с помощью \l;защитных башен\u object\tower;.
 
-\t;Объект \l;Категория\u cbot\category;
+\t;Название \l;категории\u cbot\category; объекта
 \c;AlienWasp\n;
 
-\t;Смотри также
-\l;Язык CBOT\u cbot;, \l;Переменные\u cbot\type; и \l;Категории\u cbot\category;.
+\t;Смотрите также
+\l;Язык CBOT\u cbot;,  \l;категории\u cbot\category; и \l;свойства объекта\u cbot\object;.

@@ -2,8 +2,8 @@
 \image bush 8 8;
 A bush is a type of greenery that can be flattened by \l;heavy tracked bots\u object\botrecy;, allowing other bots and \l;you\u object\human; to pass through it as well.
 
-\t;Объект \l;Категория\u cbot\category;
+\t;Название \l;категории\u cbot\category; объекта
 \c;Bush\n;
 
-\t;Смотри также
-\l;Язык CBOT\u cbot;, \l;Переменные\u cbot\type; и \l;Категории\u cbot\category;.
+\t;Смотрите также
+\l;Язык CBOT\u cbot;,  \l;категории\u cbot\category; и \l;свойства объекта\u cbot\object;.

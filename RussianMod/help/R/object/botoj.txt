@@ -13,8 +13,8 @@
 
 Чтобы запрограммировать пушку с органическими шарами, используйте \c;\l;fire\u cbot\fire;\n;. Чтобы поднимать или опускать прицел, используйте \c;\l;aim\u cbot\aim;\n;.
 
-\t;Объект \l;Категория\u cbot\category;
+\t;Название \l;категории\u cbot\category; объекта
 \c;WingedOrgaShooter\n;
 
 \t;Смотрите также
-\l;Язык CBOT\u cbot;, \l;Переменные\u cbot\type; и \l;Категории\u cbot\category;.
+\l;Язык CBOT\u cbot;,  \l;категории\u cbot\category; и \l;свойства объекта\u cbot\object;.

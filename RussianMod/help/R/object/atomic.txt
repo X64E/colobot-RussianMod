@@ -5,11 +5,11 @@
 
 Ядерные батарея нельзя перезаряжать или перерабатывать. \l;Ядерный завод\u object\nuclear; и \l;урановая руда\u object\uranore; необходимы, чтобы произвести новую полностью заряженную ядерную батарею.
 
-\t;Транспорт
-Все \l;сборщики\u object\botgr; и \l;астронавт\u object\human;.
+\t;Транспортировка
+Осуществима любым \l;сборщиком\u object\botgr; и \l;астронавтом\u object\human;.
 
-\t;Объект \l;Категория\u cbot\category;
+\t;Название \l;категории\u cbot\category; объекта
 \c;NuclearCell\n;
 
-\t;Смотри также
-\l;Язык CBOT\u cbot;, \l;Переменные\u cbot\type; и \l;Категории\u cbot\category;.
+\t;Смотрите также
+\l;Язык CBOT\u cbot;,  \l;категории\u cbot\category; и \l;свойства объекта\u cbot\object;.

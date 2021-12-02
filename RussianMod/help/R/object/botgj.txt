@@ -28,8 +28,8 @@ o  \l;Органическая материя\u object\bullet;.
 
 Чтобы запрограммировать рабочую руку, используйте \c;\l;grab\u cbot\grab;\n; и \c;\l;drop\u cbot\drop;\n;.
 
-\t;Объект \l;Категория\u cbot\category;
+\t;Название \l;категории\u cbot\category; объекта
 \c;WingedGrabber\n;
 
 \t;Смотрите также
-\l;Язык CBOT\u cbot;, \l;Переменные\u cbot\type; и \l;Категории\u cbot\category;.
+\l;Язык CBOT\u cbot;,  \l;категории\u cbot\category; и \l;свойства объекта\u cbot\object;.

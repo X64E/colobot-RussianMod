@@ -7,11 +7,11 @@ o  \l;Энергостанция\u object\energy;
 
 Чтобы разведать подпочву вам нужен \l;сниффер\u object\botsr;, который также может находить залежи \l;титановой руды\u object\titanore; (показанной \l;красным крестом\u object\stonspot;) или \l;урановой руды\u object\uranore; (показываемой \l;желтым кругом\u object\uranspot;).
 
-\t;Транспорт
+\t;Транспортировка
 Невозможно.
 
-\t;Объект \l;Категория\u cbot\category;
+\t;Название \l;категории\u cbot\category; объекта
 \c;PowerSpot\n;
 
-\t;Смотри также
-\l;Язык CBOT\u cbot;, \l;Переменные\u cbot\type; и \l;Категории\u cbot\category;.
+\t;Смотрите также
+\l;Язык CBOT\u cbot;,  \l;категории\u cbot\category; и \l;свойства объекта\u cbot\object;.

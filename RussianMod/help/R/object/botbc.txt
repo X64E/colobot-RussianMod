@@ -25,8 +25,8 @@ Tracked bots can ascend steep inclinations but they are quite slow and use a lot
 
 To program the neutron gun, use \c;\l;build\u cbot\build;\n;.
 
-\t;Объект \l;Категория\u cbot\category;
+\t;Название \l;категории\u cbot\category; объекта
 \c;TrackedBuilder\n;
 
 \t;Смотрите также
-\l;Язык CBOT\u cbot;, \l;Переменные\u cbot\type; и \l;Категории\u cbot\category;.
+\l;Язык CBOT\u cbot;,  \l;категории\u cbot\category; и \l;свойства объекта\u cbot\object;.
