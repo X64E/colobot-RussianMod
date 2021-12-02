@@ -1,0 +1,16 @@
+\b;Инструкция \c;canresearch\n;
+Синтаксис:
+\s;\c;canresearch ( исследование );\n;
+
+Checks if a \l;research\u cbot\researches; can be done during current mission.
+
+\t;research: \c;\l;int\u cbot\int;\n;
+\l;Имя исследования\u cbot\researches;.
+
+\t;Возвращаемое значение: \c;\l;bool\u cbot\bool;\n;
+\const;true\norm; if the research can be done (even if it is already done, to check that, use the \l;researched\u cbot\researched; instruction)
+\const;false\norm; if the research cannot be done
+
+\t;См. также
+\l;Research names\u cbot\researches;, \c;\l;research\u cbot\research;\n;, \c;\l;researched\u cbot\researched;\n;.
+\l;Programming\u cbot;, \l;types\u cbot\type; and \l;categories\u cbot\category;.

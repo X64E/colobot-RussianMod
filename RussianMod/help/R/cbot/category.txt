@@ -1,0 +1,120 @@
+\b;Значение \c;Категорий\n;
+Категории отображают названия обьектов на языке CBOT. В игре COLOBOT все предеты являются обьектами: роботы, здания, сырье, и т.д., даже сам игрок.
+
+В программе категории всегда отображаются как \const;категория\norm;. Если категория не выделена, то это ошибка. Верхний и нижний регистр должны сохраняться как есть.
+
+Ниже доступны разные категории:
+
+\t;Здания:
+
+\button 176;   \c;\l;Houston\u object\huston;          \n;Mission Control
+\button 171;   \c;\l;SpaceShip\u object\base;        \n;Spaceship
+\button 160;   \c;\l;BotFactory\u object\factory;       \n;Robot Factory
+\button 163;   \c;\l;ResearchCenter\u object\research;   \n;Research Center
+\button 168;   \c;\l;RadarStation\u object\radar;     \n;Radar
+\button 172;   \c;\l;ExchangePost\u object\exchange;     \n;Information Exchange Post
+\button 169;   \c;\l;RepairCenter\u object\repair;     \n;Repair Center
+\button 165;   \c;\l;DefenseTower\u object\tower;     \n;Defense Tower
+\button 166;   \c;\l;AutoLab\u object\labo;          \n;Organic Matter Analyzer 
+\button 164;   \c;\l;PowerStation\u object\station;     \n;Power Station
+\button 167;   \c;\l;PowerPlant\u object\energy;       \n;Power Cell Factory
+\button 170;   \c;\l;NuclearPlant\u object\nuclear;     \n;Nuclear Plant
+\button 162;   \c;\l;Converter\u object\convert;        \n;Titanium Converter
+\button 161;   \c;\l;Derrick\u object\derrick;          \n;Derrick
+\button 174;   \c;\l;PowerCaptor\u object\captor;      \n;Parabolic Lightning Conductor
+\button 175;   \c;\l;Vault\u object\safe;            \n;Vault
+       \c;\l;StartArea\u object\start;        \n;Starting Pad
+       \c;\l;GoalArea\u object\goal;         \n;Finishing Pad
+       \c;\l;Target1\u object\target1;          \n;Flying target
+       \c;\l;AlienNest\u object\nest;        \n;Alien Nest
+
+
+\t;Portable Objects:
+
+       \c;\l;TitaniumOre\u object\titanore;          \n;Титановая Руда
+       \c;\l;UraniumOre\u object\uranore;           \n;Урановая Руда
+       \c;\l;Titanium\u object\titan;             \n;Куб переработанного титана
+       \c;\l;PowerCell\u object\power;            \n;Обычная Батарейка
+       \c;\l;NuclearCell\u object\atomic;          \n;Ядерная Батарейка
+       \c;\l;OrgaMatter\u object\bullet;           \n;Органическая Материя
+       \c;\l;BlackBox\u object\bbox;             \n;Черный Ящик
+       \c;\l;TNT\u object\tnt;                  \n;Взрывное устройство
+       \c;\l;KeyA..D\u object\key;              \n;Ключи A, B, C and D
+
+
+\t;Роботы:
+
+\button 158;   \c;\l;PracticeBot\u object\bottr;            \n;Тренировочный Бот
+\button 173;   \c;\l;TargetBot\u object\bottarg;              \n;Целевой бот
+
+\button 137;   \c;\l;WheeledGrabber\u object\botgr;         \n;Колесный сборщик
+\button 138;   \c;\l;TrackedGrabber\u object\botgc;         \n;Гусеничный сборщик
+\button 139;   \c;\l;WingedGrabber\u object\botgj;          \n;Летающий сборщик
+\button 150;   \c;\l;LeggedGrabber\u object\botgs;          \n;Шагающий сборщик
+
+\button 140;   \c;\l;WheeledSniffer\u object\botsr;         \n;Колесный сниффер
+\button 141;   \c;\l;TrackedSniffer\u object\botsc;         \n;Гусеничный сниффер
+\button 142;   \c;\l;WingedSniffer\u object\botsj;          \n;Летающий сниффер
+\button 152;   \c;\l;LeggedSniffer\u object\botss;          \n;Шагающий сниффер
+
+\button 143;   \c;\l;WheeledShooter\u object\botfr;         \n;Колесный стрелок
+\button 144;   \c;\l;TrackedShooter\u object\botfc;         \n;Гусеничный стрелок
+\button 145;   \c;\l;WingedShooter\u object\botfj;          \n;Летающий стрелок
+\button 151;   \c;\l;LeggedShooter\u object\botfs;          \n;Шагающий стрелок
+
+\button 153;   \c;\l;WheeledOrgaShooter\u object\botor;     \n;Колесный орга-стрелок
+\button 154;   \c;\l;TrackedOrgaShooter\u object\botoc;     \n;Гусеничный орга-стрелок
+\button 155;   \c;\l;WingedOrgaShooter\u object\botoj;      \n;Летающий орга-стрелок
+\button 156;   \c;\l;LeggedOrgaShooter\u object\botos;      \n;Шагающий орга-стрелок
+
+\button 192;   \c;\l;WheeledBuilder\u object\botbr;         \n;Wheeled Builder
+\button 193;   \c;\l;TrackedBuilder\u object\botbc;         \n;Tracked Builder
+\button 194;   \c;\l;WingedBuilder\u object\botbj;          \n;Winged Builder
+\button 195;   \c;\l;LeggedBuilder\u object\botbs;          \n;Legged Builder
+
+\button 149;   \c;\l;Subber\u object\botsub;                 \n;Саббер
+\button 148;   \c;\l;Recycler\u object\botrecy;               \n;Утилизатор
+\button 157;   \c;\l;Shielder\u object\botshld;               \n;Мобильный щит
+\button 146;   \c;\l;Thumper\u object\bottump;                \n;Ударник
+\button 147;   \c;\l;PhazerShooter\u object\botphaz;          \n;Фазовый стрелок
+
+
+\t;Enemies:
+
+       \c;\l;AlienQueen\u object\mother;         \n;Королева Чужих
+       \c;\l;AlienEgg\u object\egg;           \n;Яйцо чужого
+       \c;\l;AlienAnt\u object\ant;           \n;Муравей
+       \c;\l;AlienSpider\u object\spider;        \n;Паук
+       \c;\l;AlienWasp\u object\wasp;          \n;Оса
+       \c;\l;AlienWorm\u object\worm;          \n;Червь
+
+
+\t;Miscellaneous:
+
+\button 136;   \c;\l;Me\u object\human;              \n;You!
+       \c;\l;Mine\u object\mine;            \n;Mine
+       \c;\l;Barrier\u object\barrier;         \n;Barrier
+       \c;\l;Wreck\u object\wreck;           \n;Derelict bot
+       \c;\l;Ruin\u object\ruin;            \n;Derelict building
+       \c;\l;Bush\u object\bush;            \n;Greenery
+       \c;\l;GraviPlant\u object\gravi;      \n;Gravi-plant
+       \c;\l;Crystal\u object\crystal;         \n;Crystal
+       \c;\l;BrownMushroom\u object\bromush;   \n;Brown mushroom
+       \c;\l;GreenMushroom\u object\gremush;   \n;Poisonous green mushroom
+
+
+\t;Флагие и Другие Индикаторы:
+
+       \c;\l;BlueFlag\u object\flag;          \n;Blue Flag
+       \c;\l;RedFlag\u object\flag;           \n;Red Flag
+       \c;\l;GreenFlag\u object\flag;         \n;Green Flag
+       \c;\l;YellowFlag\u object\flag;        \n;Yellow Flag
+       \c;\l;VioletFlag\u object\flag;        \n;Violet Flag
+       \c;\l;WayPoint\u object\waypoint;          \n;Checkpoint
+       \c;\l;Target2\u object\target2;           \n;Flying checkpoint
+       \c;\l;PowerSpot\u object\enerspot;        \n;Underground Energy Deposit
+       \c;\l;TitaniumSpot\u object\stonspot;      \n;Underground Titanium Deposit
+       \c;\l;UraniumSpot\u object\uranspot;       \n;Underground Uranium Deposit
+
+\t;См. также
+\l;Язык CBOT\u cbot; и \l;Переменные\u cbot\type;.

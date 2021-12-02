@@ -1,0 +1,28 @@
+\b;Инструкция \c;detect\n;
+С помощью инструкции \c;detect();\n;, вы можете находить объекты такие как \l;враги\u object\mother;, боты, здания или сырье, которые находятся напротив бота. Это упрощенная версия \c;\l;radar\u cbot\radar;();\n;.
+
+\b;Для специалистов
+Синтаксис:
+\s;\c;detect ( cat );\n;
+
+Находит ближайший объект определенной  \l;категории\u cbot\category; который расположен напротив бота. Это пододно следующей инструкции:
+\s;\c;radar(cat, 0, 45, 0, 20);\n;
+
+\t;cat: \c;\l;int\u cbot\int;\n;
+o \l;Категория\u cbot\category; объектов, которые должны быть найдены. Например, когда вы ищите муравья, напришите \c;radar(AlienAnt)\n;. 
+o \l;Массив\u cbot\array; категорий объектов, которые должны быть найдены. Например, когда вы ищите сборщиков:\c;
+\s;int bots[4];
+\s;bots[0] = WheeledGrabber;
+\s;bots[1] = TrackedGrabber;
+\s;bots[2] = WingedGrabber;
+\s;bots[3] = LeggedGrabber;
+\s;object nearestGrabber = radar(bots);
+\n;
+o Keyword \const;Any\norm; if you are looking for any object (including even plants and so on).
+
+\t;Возвращаемое значение: \c;\l;bool\u cbot\bool;\n;
+\const;true\norm; if the object was found
+\const;false\norm; if the object was not found
+
+\t;См. также
+\l;Программирование\u cbot;, \l;типы\u cbot\type; и \l;категории\u cbot\category;.

@@ -1,0 +1,28 @@
+\b;Значение \c;Colors\n;
+Имена цветом используются чтобы определить определенный цвет для использования. Они могут быть переданы фукциям таким как \l;pendown\u cbot\pendown; или \l;pencolor\u cbot\pencolor;.
+
+В программе цвета всегда отображаются на \const;красном фоне\norm;. Если цвет не выделен красным, то это написано с ошибкой. Верхние и нижние регистны должны сохраняться как есть.
+
+Ниже доступны разные цвета:
+
+\c;\const;White\norm;\n;
+\c;\const;Black\norm;\n;
+\c;\const;Gray\norm;\n;
+\c;\const;LightGray\norm;\n;
+\c;\const;Red\norm;\n;
+\c;\const;Pink\norm;\n;
+\c;\const;Purple\norm;\n;
+\c;\const;Orange\norm;\n;
+\c;\const;Yellow\norm;\n;
+\c;\const;Beige\norm;\n;
+\c;\const;Brown\norm;\n;
+\c;\const;Skin\norm;\n;
+\c;\const;Green\norm;\n;
+\c;\const;LightGreen\norm;\n;
+\c;\const;Blue\norm;\n;
+\c;\const;LightBlue\norm;\n;
+
+Также вы можете рисовать разноцветные символы:
+
+\c;\const;BlackArrow\norm;\n;
+\c;\const;RedArrow\norm;\n;

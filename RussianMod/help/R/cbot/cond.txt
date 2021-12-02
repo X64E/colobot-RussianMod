@@ -1,0 +1,5 @@
+\b;Условия
+A condition is a special \l;expression\u cbot\expr; that returns a \l;boolean\u cbot\bool; value, that can only be either \c;\l;true\u cbot\true;\n; or \c;\l;false\u cbot\false;\n;. With a condition, you can choose f. ex. if the instructions in a \c;\l;while\u cbot\while;\n; loop must be repeated again, or if the instruction in a \c;\l;if\u cbot\if;\n; bloc must be executed.
+
+\t;См. также
+\l;Программирование\u cbot;, \l;типы\u cbot\type; и \l;категории\u cbot\category;.
