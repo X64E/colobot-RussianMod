@@ -1,0 +1,7 @@
+Title.E text="On Tropica" resume="Tropica"
+Title.C text="Na Tropice" resume="Tropika"
+Title.D text="Auf Tropia" resume="Tropia"
+Title.F text="Sur Tropica" resume="Tropica"
+Title.P text="Na Tropice" resume="Tropika"
+Title.B text="Em Tropica" resume="Tropica"
+Title.R text="На Тропике" resume="Тропика"
