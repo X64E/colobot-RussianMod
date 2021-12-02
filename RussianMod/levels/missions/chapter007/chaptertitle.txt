@@ -1,0 +1,7 @@
+Title.E text="On Centaury" resume="Centaury"
+Title.C text="Na Kentauru" resume="Kentaur"
+Title.D text="Auf Centauri" resume="Centauri"
+Title.F text="Sur Centaury" resume="Centaury"
+Title.P text="Na Centurii" resume="Centuria"
+Title.B text="Em Centaury" resume="Centaury"
+Title.R text="На Центавре" resume="Центавр"

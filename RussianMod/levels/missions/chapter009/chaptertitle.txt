@@ -1,0 +1,7 @@
+Title.E text="On Terranova" resume="Terranova"
+Title.C text="Na Terranově" resume="Terranova"
+Title.D text="Auf Terranova" resume="Terranova"
+Title.F text="Sur Terranova" resume="Terranova"
+Title.P text="Na Nowej Ziemi" resume="Nowa Ziemia"
+Title.B text="Em Terranova" resume="Terranova"
+Title.R text="На Терранове" resume="Терранова"
