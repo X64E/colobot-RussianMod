@@ -11,7 +11,7 @@ Starts a \l;research\u cbot\researches; of a given type.
 \l;ResearchCenter\u object\research; or \l;AutoLab\u object\labo;. Nearest research center by default.
 
 \t;Возвращаемое значение: \c;\l;int\u cbot\int;\n;
-Normally an error stops the program. You can prevent the program from stopping on errors by using the \c;\l;errmode\u cbot\errmode;(0)\n; instruction. A value different from zero if an error occurred is then returned by \c;research()\n;.
+Обычно при возникновении ошибки выполнение программы останавливается. Избежать этого можно применив инструкцию \c;\l;errmode\u cbot\errmode;(0)\n; . Тогда при возникновении ошибки будет возвращено значение отличное от нуля инструкцией \c;research()\n;.
 \c;== 0 \n;The research successfully started
 \c;!= 0 \n;The research could not be started (e.g. the research is disabled in the level, no power cell)
 

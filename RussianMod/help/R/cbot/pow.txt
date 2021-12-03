@@ -3,13 +3,19 @@
 \s;\c;pow ( x, y );\n;
 
 \t;x: \c;\l;float\u cbot\float;\n;
-Base.
+Число.
 
 \t;y: \c;\l;float\u cbot\float;\n;
-Экспонента.
+Степень.
 
 \t;Возвращаемое значение: \c;\l;float\u cbot\float;\n;
-x to the y (x raised to the yth power).
+Число x возведенное в степень y.
+
+\t;Алтернативный способ возведения в степень
+Инструкция pow(x,y) полностью эквивалентна математическому оператору **
+
+\s;\c;message(pow(2,8));   // результат = 256\n;
+\s;\c;message(2**8);       // результат = 256\n;
 
 \t;См. также
 \l;Программирование\u cbot;, \l;типы\u cbot\type; и \l;выражения\u cbot\expr;.

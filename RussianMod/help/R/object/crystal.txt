@@ -1,6 +1,6 @@
-\b;Crystal
+\b;Кристалл
 \image crystal 8 8;
-The growth of these large blue crystals signifies the presence of \l;titanium ore\u object\titanore; in the subsoil. Use a \l;sniffer\u object\botsr; in order to confirm that.
+Крупные голубые кристаллы как правило произростают в местах подземного месторождения \l;титановой руды\u object\titanore;. Используйте \l;сниффер\u object\botsr; чтобы точно удостовериться в этом.
 
 \t;Название \l;категории\u cbot\category; объекта
 \c;Crystal\n;

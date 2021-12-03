@@ -1,20 +1,21 @@
-\b;Instruction \c;flag\n;
+\b;Инструкция \c;flag\n;
 Синтаксис:
-\s;\c;flag ( color );\n;
+\s;\c;flag ( цвет );\n;
 
-Plants a \l;colored flag\u object\flag; in front of the \l;sniffer\u object\botsr;.
+Устанавливает \l;флаг\u object\flag; определенного цвета перед \l;сниффером\u object\botsr;.
 
-\t;color: \c;\l;int\u cbot\int;\n; (default value: \c;Blue\n;)
-\c;Blue\n;
-\c;Red\n;
-\c;Green\n;
-\c;Yellow\n;
-\c;Violet\n;
+\t;цвет: \c;\l;int\u cbot\int;\n; (значение по умолчанию: \c;Blue\n;)
+Цвет флага может принимать следующие значения:
+\c;\const;Blue\norm; - синий,\n;
+\c;\const;Red\norm; - красный,\n;
+\c;\const;Green\norm; - зелёный,\n;
+\c;\const;Yellow\norm; - жёлтый,\n;
+\c;\const;Violet\norm; - фиолетовый.\n;
 
 \t;Возвращаемое значение: \c;\l;int\u cbot\int;\n;
-Normally an error stops the program. You can prevent the program from stopping on errors by using the \c;\l;errmode\u cbot\errmode;(0)\n; instruction. A value different from zero if an error occurred is then returned by \c;flag();\n;.
-\c;== 0 \n;planted a flag
-\c;!= 0 \n;could not plant a flag
+Обычно при возникновении ошибки выполнение программы останавливается. Избежать этого можно применив инструкцию \c;\l;errmode\u cbot\errmode;(0)\n; . Тогда при возникновении ошибки будет возвращено значение отличное от нуля инструкцией \c;flag();\n;.
+\c;== 0 \n;флаг успешно установлен
+\c;!= 0 \n;флаг не удалось установить
 
 \t;См. также
 \l;Программирование\u cbot;, \l;типы\u cbot\type; и \l;категории\u cbot\category;.

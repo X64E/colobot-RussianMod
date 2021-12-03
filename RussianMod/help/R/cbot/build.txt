@@ -18,7 +18,7 @@ Constructs a building using a titanium cube in front of the \l;builder\u object\
 \l;Категория\u cbot\category; здания.
 
 \t;Возвращаемое значение: \c;\l;int\u cbot\int;\n;
-Normally an error stops the program. You can prevent the program from stopping on errors by using the \c;\l;errmode\u cbot\errmode;(0)\n; instruction. A value different from zero if an error occurred is then returned by \c;build()\n;.
+Обычно при возникновении ошибки выполнение программы останавливается. Избежать этого можно применив инструкцию \c;\l;errmode\u cbot\errmode;(0)\n; . Тогда при возникновении ошибки будет возвращено значение отличное от нуля инструкцией \c;build()\n;.
 \c;== 0 \n;Successfully built
 \c;!= 0 \n;Impossible to build (for example, the nearest titanium cube is too far away or the specified building is not available in the mission)
 

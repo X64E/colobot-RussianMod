@@ -1,60 +1,64 @@
 \b;Программирование - язык CBOT
-Язык CBOT очень близок к структуре и синтаксису языков C++ и Java. Он был адаптировать для специальный целей COLOBOT и для эффективного педагогического подхода.
-Этот язык состоит из инструкций (смотри ниже), \l;блоки\u cbot\bloc;, \l;функции\u cbot\function;, \l;классы\u cbot\class;, \l;переменные\u cbot\var;, \l;массивы\u cbot\array;, \l;выражения\u cbot\expr; и \l;условия\u cbot\cond;.
+Язык CBOT очень близок по синтаксису к языкам C++ и Java и специально адаптирован для эффективного обучения программированию в игровой форме, в том числе и в образовательных учреждениях.
 
-В редакторе программы, инструкция в языке CBOT всегда отображется как \token;инструкция\norm;. Если инструкция не подсвечена, это означает что она неправильно написана. Имена инструкций всегда пишутся в нижнем регистре.
+Язык состоит из: инструкций (смотри ниже), \l;блоков\u cbot\bloc;, \l;функций\u cbot\function;, \l;классов\u cbot\class;, \l;переменных\u cbot\var;, \l;массивов\u cbot\array;, \l;выражений\u cbot\expr; и \l;условий\u cbot\cond;.
+
+o  \c;\token;Инструкции\norm;\n;
+Инструкции - это внутренние команды встронные в контроллер робота. В редакторе кода, инструкции подсвечиваются как \token;инструкция\norm;. Если инструкция не подсвечена, это означает, что она неправильно написана. Имена инструкций всегда пишутся в прописными символами (в нижнем регистре).
 
 o  \c;\type;Тип\norm;\n;
 \l;Тип\u cbot\type; переменной выглядит следующим образом: \type;тип\norm;. 
 
 o  \c;\const;Константы\norm;\n;
-Константы такие как \l;категории\u cbot\category; отображаются следующим образом: \const;константа\norm;. 
+\l;Константы\u cbot\const; отображаются следующим образом: \const;константа\norm;. 
 
-\t;Инструкции в языке CBOT:
-\c;\l;extern\u cbot\extern;     \n;Показывает главную функцию
-\c;\l;if\u cbot\if;         \n;Структура выбора
-\c;\l;else\u cbot\if;       \n;Структура альтернативного выбора
-\c;\l;switch\u cbot\switch;     \n;Структура множественного выбора
-\c;\l;case\u cbot\switch;       \n;Один выбор
-\c;\l;default\u cbot\switch;    \n;Выбор по умолчанию 
-\c;\l;for\u cbot\for;        \n;Структура цикла
-\c;\l;while\u cbot\while;      \n;Структура управления
-\c;\l;do\u cbot\do;         \n;Структура управления
-\c;\l;break\u cbot\break;      \n;Выход из цикла
-\c;\l;continue\u cbot\continue;   \n;Продолжает цикл
-\c;\l;return\u cbot\return;     \n;Выход из функции
-\c;\l;sizeof\u cbot\sizeof;     \n;Размер массива
+Каждый \type;\l;объект\u cbot\object;\norm;\n; окружающего мира: бот, батарея, ресурс, строение или враг относятся к определённой \c;\const;\l;категории\u cbot\category;\norm;\n; и имеют опредленный набор свойств, полный перечень смотри в описании типа \type;\l;object\u cbot\object;\norm;\n;. 
+
+\t;Основные конструкции языка CBOT:
+\c;\l;if\u cbot\if;         \n;Оператор сравнения
+\c;\l;else\u cbot\if;       \n;Оператор иначе
+\c;\l;switch\u cbot\switch;     \n;Оператор множественного выбора
+\c;\l;case\u cbot\switch;       \n;Оператор указания варианта выбора
+\c;\l;default\u cbot\switch;    \n;Оператор выбора по умолчанию
+\c;\l;for\u cbot\for;        \n;Опертор цикла for
+\c;\l;while\u cbot\while;      \n;Оператор цикла while
+\c;\l;do\u cbot\do;         \n;Оператор цикла do - while
+\c;\l;break\u cbot\break;      \n;Оператор выхода из цикла
+\c;\l;continue\u cbot\continue;   \n;Оператор начала новой итреации цикла
+\c;\l;extern\u cbot\extern;     \n;Оператор основной функций
+\c;\l;return\u cbot\return;     \n;Оператор выхода из функции
+\c;\l;sizeof\u cbot\sizeof;     \n;Оператор для определения размера
 
 \t;Специальные инструкции для ботов:
-\c;\l;detect\u cbot\detect;     \n;Simple object detection
-\c;\l;radar\u cbot\radar;      \n;Advanced object detection
-\c;\l;radarall\u cbot\radarall;   \n;Advanced multiple objects detection
-\c;\l;search\u cbot\search;     \n;Object detection from a specific point
-\c;\l;direction\u cbot\direct;  \n;Calculates a rotation angle
-\c;\l;distance\u cbot\dist;   \n;Calculates a distance
-\c;\l;distance2d\u cbot\dist2d; \n;Calculates a distance
-\c;\l;wait\u cbot\wait;       \n;Waits
-\c;\l;move\u cbot\move;       \n;Moves forward or backward
-\c;\l;turn\u cbot\turn;       \n;Turns
-\c;\l;goto\u cbot\goto;       \n;Goes to a given position
-\c;\l;motor\u cbot\motor;      \n;Direct motor control
-\c;\l;jet\u cbot\jet;        \n;Direct jet engine control
-\c;\l;message\u cbot\message;    \n;Displays a message
-\c;\l;retobject\u cbot\retobj;  \n;Returns an object from a function
-\c;\l;errmode\u cbot\errmode;    \n;Error treatement control
-\c;\l;abstime\u cbot\abstime;    \n;Returns the absolute time
-\c;\l;pendown\u cbot\pendown;    \n;Starts drawing
-\c;\l;penup\u cbot\penup;      \n;Stops drawing
-\c;\l;pencolor\u cbot\pencolor;   \n;Changes the pen color
-\c;\l;penwidth\u cbot\penwidth;   \n;Changes the pen width
-\c;\l;factory\u cbot\factory;    \n;Starts construction of a bot
-\c;\l;research\u cbot\research;   \n;Starts a research
-\c;\l;takeoff\u cbot\takeoff;    \n;Launches a spaceship
-\c;\l;isbusy\u cbot\isbusy;     \n;Checks if object is busy
-\c;\l;canresearch\u cbot\canresearch;\n;Checks if a technology can be researched
-\c;\l;researched\u cbot\researched; \n;Checks if a technology is researched
-\c;\l;canbuild\u cbot\canbuild;   \n;Checks if a building can be built
-\c;\l;buildingenabled\u cbot\buildingenabled; \n;Checks if a building is available during current mission
+\c;\l;detect\u cbot\detect;     \n;Простая проверка объекта на наличие
+\c;\l;radar\u cbot\radar;      \n;Поиск объекта
+\c;\l;radarall\u cbot\radarall;   \n;Поиск множества объектов
+\c;\l;search\u cbot\search;     \n;Поиск объекта в определенной точке пространства
+\c;\l;direction\u cbot\direct;  \n;Вычеслить угол поворта
+\c;\l;distance\u cbot\dist;   \n;Вычеслить дистанцию
+\c;\l;distance2d\u cbot\dist2d; \n;Вычеслить дистанцию без учета высоты
+\c;\l;wait\u cbot\wait;       \n;Ожидать
+\c;\l;move\u cbot\move;       \n;Переместиться вперед или назад
+\c;\l;turn\u cbot\turn;       \n;Вращение
+\c;\l;goto\u cbot\goto;       \n;Перейти в указанную позицию
+\c;\l;motor\u cbot\motor;      \n;Прямое управление моторами
+\c;\l;jet\u cbot\jet;        \n;Прямое управление реактивным двигателем
+\c;\l;message\u cbot\message;    \n;Вывести сообщение
+\c;\l;retobject\u cbot\retobj;  \n;Возвращает объект по его уникальному иденитификатору
+\c;\l;errmode\u cbot\errmode;    \n;Управление обработкой ошибок
+\c;\l;abstime\u cbot\abstime;    \n;Возвращает абсолютное время
+\c;\l;pendown\u cbot\pendown;    \n;Начать рисование (Опустить кисть)
+\c;\l;penup\u cbot\penup;      \n;Прекратить рисование (Поднять кисть)
+\c;\l;pencolor\u cbot\pencolor;   \n;Установить цвет кисти
+\c;\l;penwidth\u cbot\penwidth;   \n;Установить размер кисти
+\c;\l;factory\u cbot\factory;    \n;Начать производство бота
+\c;\l;research\u cbot\research;   \n;Начать исследование
+\c;\l;takeoff\u cbot\takeoff;    \n;Запустить космический корабль
+\c;\l;isbusy\u cbot\isbusy;     \n;Проверить объект на занятость
+\c;\l;canresearch\u cbot\canresearch;\n;Проверить может ли технология быть исследованна
+\c;\l;researched\u cbot\researched; \n;Проверить исследована ли уже технология
+\c;\l;canbuild\u cbot\canbuild;   \n;Проверить можно ли построить постройку
+\c;\l;buildingenabled\u cbot\buildingenabled; \n;Проверить доступна ли постройка в текущей миссии
 
 \t;Инструкции о топологии:
 \c;\l;space\u cbot\space;      \n;Вычисляет свободное пространство
@@ -63,36 +67,35 @@ o  \c;\const;Константы\norm;\n;
 \c;\l;flatground\u cbot\flatgrnd; \n;Возвращает радиус плоской области
 
 \t;Специальные инструкции для некоторых ботов:
-\c;\l;grab\u cbot\grab;       \n;Picks up an object
-\c;\l;drop\u cbot\drop;       \n;Puts down an object
-\c;\l;sniff\u cbot\sniff;      \n;Sounds the subsoil
-\c;\l;thump\u cbot\thump;      \n;Overturns alien insects
-\c;\l;recycle\u cbot\recycle;    \n;Recycles a derelict bot
-\c;\l;shield\u cbot\shield;     \n;Extends or withdraws the shield
-\c;\l;fire\u cbot\fire;       \n;Fires the cannon
-\c;\l;aim\u cbot\aim;        \n;Rotates the cannon
-\c;\l;build\u cbot\build;      \n;Builds a building
-\c;\l;flag\u cbot\flag;       \n;Plants a flag
-\c;\l;deflag\u cbot\deflag;     \n;Removes a flag
+\c;\l;grab\u cbot\grab;       \n;Взять объект
+\c;\l;drop\u cbot\drop;       \n;Положить объект
+\c;\l;sniff\u cbot\sniff;      \n;Просканировать недра земли
+\c;\l;thump\u cbot\thump;      \n;Опрокинуть насекомыхударом
+\c;\l;recycle\u cbot\recycle;    \n;Переработать заброшеного бота
+\c;\l;shield\u cbot\shield;     \n;Управление защитным полем
+\c;\l;fire\u cbot\fire;       \n;Совершить выстрел
+\c;\l;aim\u cbot\aim;        \n;Прицелить орудие
+\c;\l;build\u cbot\build;      \n;Построить здание
+\c;\l;flag\u cbot\flag;       \n;Установить флаг
+\c;\l;deflag\u cbot\deflag;     \n;Убрать флаг
 
-\t;Специальные инструкции по обмену сообщениями:
+\t;Специальные инструкции для обмена сообщениями:
 \c;\l;receive\u cbot\receive;    \n;Получает информацию
 \c;\l;send\u cbot\send;       \n;Посылает новую информацию
 \c;\l;testinfo\u cbot\testinfo;   \n;Проверяет существует ли информация
 \c;\l;deleteinfo\u cbot\delinfo; \n;Удаляет существующую информацию
 
-
-\t;Специальные инструкции для классов:
-\c;\l;class\u cbot\class;      \n;Class declararion
-\c;\l;public\u cbot\public;     \n;Declares a public class member
-\c;\l;private\u cbot\private;    \n;Declares a private class member
-\c;\l;protected\u cbot\protected;  \n;Declares a protected class member
-\c;\l;static\u cbot\static;     \n;Declares a static class member
-\c;\l;synchronized\u cbot\synchro; \n;Prevents simultaneous execution
-\c;\l;new\u cbot\new;        \n;Creates a new instance
-\c;\l;this\u cbot\this;       \n;Reference to the current instance
-\c;\l;extends\u cbot\extends;    \n;Extends a class
-\c;\l;super\u cbot\super;      \n;Grants access to the parent class
+\t;Специальные инструкции классов:
+\c;\l;class\u cbot\class;      \n;Определяет класс
+\c;\l;public\u cbot\public;     \n;Определяет публичный (public) член класса
+\c;\l;private\u cbot\private;    \n;Определяет приватный (private) член класса
+\c;\l;protected\u cbot\protected;  \n;Определяет защищенный (protected) член класса
+\c;\l;static\u cbot\static;     \n;Определяет статический (static) член класса
+\c;\l;synchronized\u cbot\synchro; \n;Предотвращает одновременное выполнение
+\c;\l;new\u cbot\new;        \n;Создает новый экземпляр класса
+\c;\l;this\u cbot\this;       \n;Указатель на текущий объект данного класса
+\c;\l;extends\u cbot\extends;    \n;Расширение уже существующего класса
+\c;\l;super\u cbot\super;      \n;Предоставляет доступ к родительскому классу
 
 \t;Специальные инструкции для строк:
 \c;\l;strlen\u cbot\strlen;     \n;Получает длину строки
@@ -104,7 +107,7 @@ o  \c;\const;Константы\norm;\n;
 \c;\l;strupper\u cbot\strupper;   \n;Конвертирует в верхний регистр
 \c;\l;strlower\u cbot\strlower;   \n;Конвертирует в нижний регистр
 
-\t;Специальные инструкции для файлов:
+\t;Специальные инструкции для работы с файлами:
 \c;\l;open\u cbot\open;       \n;Открывает файл
 \c;\l;close\u cbot\close;      \n;Закрывает файл
 \c;\l;writeln\u cbot\writeln;    \n;Записывает строку в файл
@@ -116,10 +119,10 @@ o  \c;\const;Константы\norm;\n;
 \c;\l;rand\u cbot\rand;       \n;Возвращает случайное число
 \c;\l;pow\u cbot\pow;        \n;Возвращает степень числа
 \c;\l;sqrt\u cbot\sqrt;       \n;Вовращает квадратный корень
-\c;\l;floor\u cbot\floor;      \n;Возвращает предыдущее целое число
-\c;\l;ceil\u cbot\ceil;       \n;Возвращает наименьшее следующее целое число
+\c;\l;floor\u cbot\floor;      \n;Возвращает число округленное в большую сторону
+\c;\l;ceil\u cbot\ceil;       \n;Возвращает число округленное в меньшую сторону
 \c;\l;round\u cbot\round;      \n;Возвращает округленное число
-\c;\l;trunc\u cbot\trunc;      \n;Возвращает усеченное число
+\c;\l;trunc\u cbot\trunc;      \n;целую часть числа без дробной части
 \c;\l;sin\u cbot\sin;        \n;Возвращает синус
 \c;\l;cos\u cbot\cos;        \n;Возвращает косинус
 \c;\l;tan\u cbot\tan;        \n;Возвращает тангенс

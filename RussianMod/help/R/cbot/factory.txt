@@ -14,7 +14,7 @@ Program that will be run on the bot after factory finishes the construction. Thi
 \l;BotFactory\u object\factory;, nearest by default.
 
 \t;Возвращаемое значение: \c;\l;int\u cbot\int;\n;
-Normally an error stops the program. You can prevent the program from stopping on errors by using the \c;\l;errmode\u cbot\errmode;(0)\n; instruction. A value different from zero if an error occurred is then returned by \c;factory()\n;.
+Обычно при возникновении ошибки выполнение программы останавливается. Избежать этого можно применив инструкцию \c;\l;errmode\u cbot\errmode;(0)\n; . Тогда при возникновении ошибки будет возвращено значение отличное от нуля инструкцией \c;factory()\n;.
 \c;== 0 \n;The construction successfully started
 \c;!= 0 \n;The construction could not be started (e.g. no \l;Titanium\u object\titan; in the factory, the bot is not researched)
 

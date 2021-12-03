@@ -1,23 +1,23 @@
 \b;Инструкция \c;buildingenabled\n;
-The instruction \c;buildingenabled();\n; lets you know if a building of a given \l;category\u cbot\category; can be built during current mission.
+Инструкция \c;buildingenabled();\n; позволяет вам узнать, можно ли построить здание указанной \l;категории\u cbot\category; в течении текущей миссии.
 
-\b;Основное использование
-Это подобно инструкции \c;\l;canbuild();\u cbot\canbuild;\n;. Но это не позовляет проверить что требуемное исследование было сделано.
+\b;Основное назначение
+Инструкция чем-то схожа с \c;\l;canbuild();\u cbot\canbuild;\n;, но она не позовляет проверить, было ли проведено исследование постройки или нет.
 \c;
-\s; \l;if\u cbot\if; (buildingenabled(\l;BotFactory\u object\factory;))
+\s; if (buildingenabled(\l;BotFactory\u object\factory;))
 \s; {
 \s; 	build(\l;BotFactory\u object\factory;);
 \s; }
 \n;
 \b;Для специалистов
 Синтаксис:
-\s;\c;buildingenabled ( cat );\n;
+\s;\c;buildingenabled ( категория );\n;
 
-\t;cat: \c;\l;int\u cbot\int;\n;
+\t;категория: \c;\l;int\u cbot\int;\n;
 \l;Категория\u cbot\category; здания.
 
 \t;Возвращаемое значение: \c;\l;bool\u cbot\bool;\n;
-\c;true\n; если здание может быть построено, \c;false\n; в противном случае.
+\c;true\n; если здание может быть построено, в противном случае \c;false\n;.
 
 \t;См. также
 \c;\l;build\u cbot\build;\n;, \c;\l;canbuild\u cbot\canbuild;\n;.

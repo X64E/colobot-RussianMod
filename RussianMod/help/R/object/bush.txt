@@ -1,6 +1,6 @@
-\b;Bush
+\b;Куст
 \image bush 8 8;
-A bush is a type of greenery that can be flattened by \l;heavy tracked bots\u object\botrecy;, allowing other bots and \l;you\u object\human; to pass through it as well.
+Кустарники - это разновидность растений, которые являются непроходимым препятствием для перемещения вас и ваших роботов. Лучше их обходить, но если они не позволяют вам достигнуть какой-то цели, то кустарник можно примять к земле, проехав по нему одним из \l;тяжелых гуссеничных ботов\u object\botrecy;, после чего другие боты, а так же \l;Вы\u object\human; сможете проходить сквозь них свободно.
 
 \t;Название \l;категории\u cbot\category; объекта
 \c;Bush\n;

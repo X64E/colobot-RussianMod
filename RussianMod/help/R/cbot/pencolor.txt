@@ -7,7 +7,7 @@ The instruction \c;pencolor();\n; instructs the bot to change the color of the p
 \l;Color name\u cbot\colors;.
 
 \t;Возвращаемое значение: \c;\l;int\u cbot\int;\n;
-Normally an error stops the program. You can prevent the program from stopping on errors by using the \c;\l;errmode\u cbot\errmode;(0)\n; instruction. A value different from zero if an error occurred is then returned by \c;pencolor();\n;.
+Обычно при возникновении ошибки выполнение программы останавливается. Избежать этого можно применив инструкцию \c;\l;errmode\u cbot\errmode;(0)\n; . Тогда при возникновении ошибки будет возвращено значение отличное от нуля инструкцией \c;pencolor();\n;.
 \c;== 0 \n;The color was changed
 \c;!= 0 \n;The instruction did not work
 

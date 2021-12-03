@@ -19,7 +19,7 @@
 Also, some objects have additional methods (instructions). See them in \l;the main list\u cbot; in the \c;"Instructions specific for some objects" section.
 
 \s;\c;category\n;
-The \n;\l;category\u cbot\category; of an object allows you to know what it is, f. ex. what kind of bot, building, enemy, etc.
+The \n;\l;category\u cbot\category; of an object allows you to know what it is, К примеру what kind of bot, building, enemy, etc.
 
 \s;\c;position\n;
 Положение объекта на планете в метрах. Координаты \c;x\n; и \c;y\n; соответствуют положению на карте, а координата \c;z\n; соответствует высоте над (и соответственно под) уровнем моря.

@@ -1,20 +1,20 @@
-\b;Значение \c;Категорий\n;
-Категории отображают названия обьектов на языке CBOT. В игре COLOBOT все предеты являются обьектами: роботы, здания, сырье, и т.д., даже сам игрок.
+\b;Значение \c;Категории\n;
+Категории отображают названия обьектов на языке CBOT. В игре COLOBOT все предеты являются обьектами: роботы, здания, сырье, и т.д., и даже сам игрок.
 
-В программе категории всегда отображаются как \const;категория\norm;. Если категория не выделена, то это ошибка. Верхний и нижний регистр должны сохраняться как есть.
+В программе категории всегда отображаются как \const;константы\norm;. Если категория не выделена, то это ошибка. Верхний и нижний регистр должны соблюдаться.
 
-Ниже доступны разные категории:
+Ниже перечислены разные категории:
 
 \t;Здания:
 
-\button 176;   \c;\l;Houston\u object\huston;          \n;Mission Control
-\button 171;   \c;\l;SpaceShip\u object\base;        \n;Spaceship
-\button 160;   \c;\l;BotFactory\u object\factory;       \n;Robot Factory
-\button 163;   \c;\l;ResearchCenter\u object\research;   \n;Research Center
-\button 168;   \c;\l;RadarStation\u object\radar;     \n;Radar
-\button 172;   \c;\l;ExchangePost\u object\exchange;     \n;Information Exchange Post
+\button 176;   \c;\l;Houston\u object\huston;          \n;Центр Управления Полётами
+\button 171;   \c;\l;SpaceShip\u object\base;        \n;Космический корабль
+\button 160;   \c;\l;BotFactory\u object\factory;       \n;Фабрика роботов
+\button 163;   \c;\l;ResearchCenter\u object\research;   \n;Исследователький Центр
+\button 168;   \c;\l;RadarStation\u object\radar;     \n;Радар
+\button 172;   \c;\l;ExchangePost\u object\exchange;     \n;Пост обмена информацией 
 \button 169;   \c;\l;RepairCenter\u object\repair;     \n;Repair Center
-\button 165;   \c;\l;DefenseTower\u object\tower;     \n;Defense Tower
+\button 165;   \c;\l;DefenseTower\u object\tower;     \n;Защитная башня
 \button 166;   \c;\l;AutoLab\u object\labo;          \n;Organic Matter Analyzer 
 \button 164;   \c;\l;PowerStation\u object\station;     \n;Power Station
 \button 167;   \c;\l;PowerPlant\u object\energy;       \n;Power Cell Factory
@@ -22,7 +22,7 @@
 \button 162;   \c;\l;Converter\u object\convert;        \n;Titanium Converter
 \button 161;   \c;\l;Derrick\u object\derrick;          \n;Derrick
 \button 174;   \c;\l;PowerCaptor\u object\captor;      \n;Parabolic Lightning Conductor
-\button 175;   \c;\l;Vault\u object\safe;            \n;Vault
+\button 175;   \c;\l;Vault\u object\safe;            \n;Хранилище
        \c;\l;StartArea\u object\start;        \n;Starting Pad
        \c;\l;GoalArea\u object\goal;         \n;Finishing Pad
        \c;\l;Target1\u object\target1;          \n;Flying target
@@ -67,12 +67,12 @@
 \button 155;   \c;\l;WingedOrgaShooter\u object\botoj;      \n;Летающий орга-стрелок
 \button 156;   \c;\l;LeggedOrgaShooter\u object\botos;      \n;Шагающий орга-стрелок
 
-\button 192;   \c;\l;WheeledBuilder\u object\botbr;         \n;Wheeled Builder
-\button 193;   \c;\l;TrackedBuilder\u object\botbc;         \n;Tracked Builder
-\button 194;   \c;\l;WingedBuilder\u object\botbj;          \n;Winged Builder
-\button 195;   \c;\l;LeggedBuilder\u object\botbs;          \n;Legged Builder
+\button 192;   \c;\l;WheeledBuilder\u object\botbr;         \n;Колесный строитель
+\button 193;   \c;\l;TrackedBuilder\u object\botbc;         \n;Гусеничный строитель
+\button 194;   \c;\l;WingedBuilder\u object\botbj;          \n;Летающий строитель
+\button 195;   \c;\l;LeggedBuilder\u object\botbs;          \n;Шагающий строитель
 
-\button 149;   \c;\l;Subber\u object\botsub;                 \n;Саббер
+\button 149;   \c;\l;Subber\u object\botsub;                 \n;Саббер (подводный сборщик)
 \button 148;   \c;\l;Recycler\u object\botrecy;               \n;Утилизатор
 \button 157;   \c;\l;Shielder\u object\botshld;               \n;Мобильный щит
 \button 146;   \c;\l;Thumper\u object\bottump;                \n;Ударник
@@ -91,28 +91,28 @@
 
 \t;Miscellaneous:
 
-\button 136;   \c;\l;Me\u object\human;              \n;You!
-       \c;\l;Mine\u object\mine;            \n;Mine
-       \c;\l;Barrier\u object\barrier;         \n;Barrier
+\button 136;   \c;\l;Me\u object\human;              \n;Вы!
+       \c;\l;Mine\u object\mine;            \n;Мина
+       \c;\l;Barrier\u object\barrier;         \n;Барьер
        \c;\l;Wreck\u object\wreck;           \n;Derelict bot
        \c;\l;Ruin\u object\ruin;            \n;Derelict building
-       \c;\l;Bush\u object\bush;            \n;Greenery
-       \c;\l;GraviPlant\u object\gravi;      \n;Gravi-plant
-       \c;\l;Crystal\u object\crystal;         \n;Crystal
-       \c;\l;BrownMushroom\u object\bromush;   \n;Brown mushroom
-       \c;\l;GreenMushroom\u object\gremush;   \n;Poisonous green mushroom
+       \c;\l;Bush\u object\bush;            \n;Кусты
+       \c;\l;GraviPlant\u object\gravi;      \n;Антигравитационное растение
+       \c;\l;Crystal\u object\crystal;         \n;Кристалл
+       \c;\l;BrownMushroom\u object\bromush;   \n;Коричневые грибы
+       \c;\l;GreenMushroom\u object\gremush;   \n;Ядовитые зелёные грибы
 
 
-\t;Флагие и Другие Индикаторы:
+\t;Флагие и Другие Маркеры:
 
        \c;\l;BlueFlag\u object\flag;          \n;Blue Flag
        \c;\l;RedFlag\u object\flag;           \n;Red Flag
        \c;\l;GreenFlag\u object\flag;         \n;Green Flag
        \c;\l;YellowFlag\u object\flag;        \n;Yellow Flag
        \c;\l;VioletFlag\u object\flag;        \n;Violet Flag
-       \c;\l;WayPoint\u object\waypoint;          \n;Checkpoint
+       \c;\l;WayPoint\u object\waypoint;          \n;Контрольная точка (чекпоинт)
        \c;\l;Target2\u object\target2;           \n;Flying checkpoint
-       \c;\l;PowerSpot\u object\enerspot;        \n;Underground Energy Deposit
+       \c;\l;PowerSpot\u object\enerspot;         \n;Underground Energy Deposit
        \c;\l;TitaniumSpot\u object\stonspot;      \n;Underground Titanium Deposit
        \c;\l;UraniumSpot\u object\uranspot;       \n;Underground Uranium Deposit
 

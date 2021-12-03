@@ -1,16 +1,16 @@
 \b;Инструкция \c;takeoff\n;
 Синтаксис:
-\s;\c;takeoff ( object );\n;
+\s;\c;takeoff ( объект );\n;
 
-Launch a spaceship.
+Инструкция осуществляет запуск космического корабля.
 
-\t;\l;object\u cbot\object;
-\l;SpaceShip\u object\base;, nearest by default.
+\t;\l;объект\u cbot\object;
+\l;Космический корабль\u object\base;, если значение не указанно, подставляется наиболее близкий корабль.
 
 \t;Возвращаемое значение: \c;\l;int\u cbot\int;\n;
-Normally an error stops the program. You can prevent the program from stopping on errors by using the \c;\l;errmode\u cbot\errmode;(0)\n; instruction. A value different from zero if an error occurred is then returned by \c;takeoff()\n;.
-\c;== 0 \n;Spaceship takes off
-\c;!= 0 \n;Spaceship could not take off (e.g. mission is not finished yet)
+Обычно при возникновении ошибки выполнение программы останавливается. Избежать этого можно применив инструкцию \c;\l;errmode\u cbot\errmode;(0)\n; . Тогда при возникновении ошибки будет возвращено значение отличное от нуля инструкцией \c;takeoff()\n;.
+\c;== 0 \n;Запуск космического корабля осуществлен.
+\c;!= 0 \n;Невозможно выполнить запуск корабля (как правило это связанно с тем, что условия миссии не выполнены до конца)
 
 \t;См. также
 \l;Программирование\u cbot;, \l;типы\u cbot\type; и \l;категории\u cbot\category;.
