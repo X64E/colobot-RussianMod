@@ -1,18 +1,18 @@
 \b;Инструкция \c;pendown\n;
 Синтаксис:
 \s;\c;pendown ( color, width );\n;
-The instruction \c;pendown();\n; instructs the bot to have the pen down, so it starts drawing.
+Инструкция \c;pendown();\n; приказывает боту опустить кисть чтобы начать рисование.
 
-\t;color: \c;\l;int\u cbot\int;\n; (default value: \c;Black\n;)
-\l;Color name\u cbot\colors;.
+\t;color: \c;\l;int\u cbot\int;\n; (значение по умолчанию: \c;Black\n;)
+\l;Название цвета\u cbot\colors;.
 
 \t;width: \c;\l;float\u cbot\float;\n; (default value: \c;0.5\n;)
-Width of the pen. The width cannot be higher than \c;1.0\n; and cannot be lower than \c;0.0\n;. Passing a higher value will result in the width being the highest possible and passing a lower value will result in the width being the lowest possible.
+Толщина кисти. Толщина не может быть больше \c;1.0\n; и не может быть меньше \c;0.0\n;. Passing a higher value will result in the width being the highest possible and passing a lower value will result in the width being the lowest possible.
 
 \t;Возвращаемое значение: \c;\l;int\u cbot\int;\n;
 Обычно при возникновении ошибки выполнение программы останавливается. Избежать этого можно применив инструкцию \c;\l;errmode\u cbot\errmode;(0)\n; . Тогда при возникновении ошибки будет возвращено значение отличное от нуля инструкцией \c;pendown();\n;.
-\c;== 0 \n;The pen is now down
-\c;!= 0 \n;The instruction did not work
+\c;== 0 \n;Кисть подогтовлена к рисованию
+\c;!= 0 \n;Инструкцию не удалось выполнить
 
 \t;См. также
 \l;Программирование\u cbot;, \l;типы\u cbot\type; и \l;категории\u cbot\category;.

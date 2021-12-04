@@ -6,10 +6,10 @@ This keyword allows you to create a class definition by using the following synt
 \s;	declarations;
 \s;}
 \n;
-\t;All Classes Are Public
-Классы могут быть \l;public\u cbot\public;. Это означает что они могут использоватсья всеми ботами миссии.
+\t;Все классы по умолчанию являются Public
+Классы могут быть \l;public\u cbot\public;. Это означает, что они могут использоватсья всеми ботами миссии.
 
-\b;Class Members
+\b;Члены классов
 Class members are fields (\l;variables\u cbot\var;) and methods (\l;functions\u cbot\function;).
 
 For example, the following class dubbed \c;MyClass\n; contains 4 fields (\c;a\n;, \c;b\n;, \c;x\n; and \c;s\n;) and one method (\c;MyFunction\n;).
@@ -18,7 +18,7 @@ For example, the following class dubbed \c;MyClass\n; contains 4 fields (\c;a\n;
 \s;{
 \s;	int     a, b;
 \s;	float   x = 3.33;
-\s;	string  s = "hello";
+\s;	string  s = "привет";
 \s;	float   MyFunction(float value)
 \s;	{
 \s;		return (value * x) - 1;
@@ -49,15 +49,15 @@ Class members can be accessed outside of the class definition by using the \c;.\
 \n;
 Class members are \l;public\u cbot\public; by default, which means that they are accessible outside of the class definition. They can also be declared as \c;\l;private\u cbot\private;\n; or \c;\l;protected\u cbot\protected;\n;. Such members can only be accessed inside of the class definition.
 
-\t;Class Members Modifiers
+\t;Модификаторы членов классов
 Fields and methods can also be declared as \c;\l;static\u cbot\static;\n;. Methods can be additionaly declared as \c;\l;synchronized\u cbot\synchro;\n;.
 
-\t;Member Initialization
+\t;Инициализация членов 
 Как показано в предыдущем примере, члены класса могут быть инициализированы в определении класса (\c;int x = 3.33;\n;).
 
 Another way of initiliazing fields is by defining a constructor which is a special method having the same name as the class. This method will be called automatically at \l;creation\u cbot\new; time of a class instance. Constructors can be \l;overloaded\u cbot\function;.
 
-Example:\c;
+Пример:\c;
 \s;public class MyClass
 \s;{
 \s;	int  a, b;
@@ -92,14 +92,14 @@ You can also define a destructor. This must be a \c;\l;void\u cbot\void;\n; fonc
 \c;
 \s;public class MyClass
 \s;{
-\s;	static private int counter = 0; // instance counter
+\s;	static private int counter = 0; // счетчик экземпляров класса
 \s;	void  MyClass( )
 \s;	{
-\s;		counter++;  // one instance more
+\s;		counter++;  // стало на один экземпляр больше
 \s;	}
 \s;	void ~MyClass( )
 \s;	{
-\s;		counter--;  // one instance less
+\s;		counter--;  // стало на один экземпляр меньше
 \s;	}
 \s;}
 \s;extern void object::Test()

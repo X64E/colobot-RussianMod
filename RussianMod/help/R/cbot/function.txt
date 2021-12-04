@@ -1,20 +1,20 @@
 \b;Функции
-Функция, проще, это инструкция созданная вами.
+Функция - если говорить простым языком, то это инструкция созданная вами для выполнения нужных вам действий.
 
-\b;Функция main
-Вы уже знаете как создать функцию. Каждая программа в CBOT должна иметь функцию main, которая выглядит следующим образом:
+\b;Главная функция программы
+Каждая программа языка CBOT должна иметь главную функцию - это функция с которой начинается выполнение программы. Выглядит такая функция следующим образом:
 \c;
-\s;extern void object::ProgramName()
+\s;extern void object::Новый()
 \s;{
 \s;	
-\s;	// instructions
+\s;	// место для ваших инструкций
 \s;	
 \s;}
 \n;
-Ничего кроме имени может быть изменено в главной функции. Ключевое слово \c;\l;extern\u cbot\extern;\n; отличает главную функцию от других.
+Единственное что можно изменить в главной функции, так это её название (т.к. главная функция параметров не имеет). Программа может включать в себя множество функций, чтобы отличить главную функцию от других функций, главная функция должна быть выделена ключевым словом \c;\l;extern\u cbot\extern;\n;.
 
-\b;Основное использование
-С помощью функций вы можете разделить вашу программу на несколько частей. Каждая из них будет выполнять определенную задачу. Например, посмотрите следующую программу:
+\b;Основное применение
+С помощью функций вы можете разделить вашу программу на несколько небольших частей, каждая из которых будет выполнять определенную задачу. Это повысит "читаемость" кода и позволит избавиться от повторяющихся однообразных участков кода. Взгляните на следующий пример программы:
 \c;
 \s;extern void object::Remote()
 \s;{
@@ -28,11 +28,11 @@
 \s;	wait(5);
 \s;}
 \n;
-\c;\l;send\u cbot\send;\n; and \c;\l;wait\u cbot\wait;\n; are repeated several times. So it would be a good thing if we created a function that executes these two instructions:
+\c;Последовательности из инструкций \l;send\u cbot\send;\n; и \c;\l;wait\u cbot\wait;\n; повторяются несколько раз. So it would be a good thing if we created a function that executes these two instructions:
 \c;
-\s;void SendToPost(float op)
+\s;void SendToPost(float val)
 \s;{
-\s;	send("order", op, 100);
+\s;	send("order", val, 100);
 \s;	wait(5);
 \s;}
 \s;
@@ -55,7 +55,7 @@ Now the program is much easier to read. It is a good practice to split the progr
 \n;
 Result \l;type\u cbot\type; should be \l;void\u cbot/void; if the function does not give any. Body is just a set of instructions. Function name must be created with the exact same rules applied to \l;variables\u cbot\var;.
 
-\t;Parameters
+\t;Параметры
 Функция может иметь параметры:
 \c;
 \s;void Example(int a, float x, string s)
@@ -93,13 +93,13 @@ A function can also return a result with the \c;\l;return\u cbot\return;\n; inst
 \s;
 \s;string Sign(float a)
 \s;{
-\s;	if (a > 0)  return "positive";
-\s;	if (a < 0)  return "negative";
+\s;	if (a > 0)  return "число положительное";
+\s;	if (a < 0)  return "число отрицательное";
 \s;	return "null";
 \s;}
 \n;
 
-\b;Перегрузка
+\b;Перегрузка функций
 Вы можете объявить несколько функций с одинаковыми именами, но разными параметрами:
 \c;
 \s;float Pythagoras(float a, float b)
@@ -112,10 +112,10 @@ A function can also return a result with the \c;\l;return\u cbot\return;\n; inst
 \s;	return sqrt((a*a)+(b*b)+(c*c));
 \s;}
 \n;
-CBOT будет вызывать одну или другую функцию в зависимости от переданных параметров. Они должны быть различимыми. То есть вы не можете объявить две функции с одним именем и типами параметров в том же самом порядке. Например объявление \c;int Pythagoras(float b, float a)\n; приведет к ошибке. Заметьте, что это не относится к типу возвращаемого значения.
+CBOT будет вызывать одну или другую функцию в зависимости от переданных параметров. Они могут быть различимыми. То есть вы не можете объявить две функции с одним именем и типами параметров в том же самом порядке. Например объявление \c;int Pythagoras(float b, float a)\n; приведет к ошибке. Заметьте, что это не относится к типу возвращаемого значения.
 
 \b;Публичные Функции
-Вы также можете объявить функцию \l;public\u cbot\public; тогда она может быть использована другими ботами.
+Вы также можете объявить функцию \l;публичной (public)\u cbot\public; тогда к ней смогут получить доступ другие боты.
 
 \b;object::
 Declaring a function as a part of the \l;object\u cbot\object; namespace gives it access to \c;\l;this\u cbot\this;\n; \l;pointer\u cbot\pointer;, in other words, to all available properties of the robot which the program is run on.
@@ -127,17 +127,17 @@ Declaring a function as a part of the \l;object\u cbot\object; namespace gives i
 \n;
 
 \b;Параметры по умолчанию
-Последние параметры функции могут иметь параметры по умолчанию, которые можно опустить, когда вызывается функция.
+Параметры функций могут иметь значения по умолчанию, которые будут подставлены в случае если они не были указанны при вызове функции.
 \c;
 \s;float Add(float a = 0.0, float b = 0.0)
 \s;{
 \s;	return a + b;
 \s;}
 \s;
-\s;// Somewhere in the main program...
-\s;Add(); // Will return 0.0
-\s;Add(2.0); // Will return 2.0
-\s;Add(2.0, 3.0); // Will return 5.0
+\s;// Где-то в коде программы...
+\s;Add();         // Функция вернет 0.0 = 0.0 + 0.0
+\s;Add(2.0);      // Функция вернет 2.0 = 2.0 + 0.0
+\s;Add(2.0, 3.0); // Функция вернет 5.0 = 2.0 + 3.0
 \s;// ...
 \n;
 
@@ -154,9 +154,9 @@ Declaring a function as a part of the \l;object\u cbot\object; namespace gives i
 \s;	return a + b;
 \s;}
 \s;
-\s;// Somewhere in the main program...
-\s;Add(); // Compilation error: ambiguous call
-\s;Add(""); // Ok
+\s;// Где-то в коде программы...
+\s;Add();    // Compilation error: ambiguous call
+\s;Add("");  // Ok
 \s;Add(0.0); // Ok
 \s;// ...
 \n;

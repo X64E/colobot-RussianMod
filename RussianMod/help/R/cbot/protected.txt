@@ -1,7 +1,7 @@
 \b;Keyword \c;protected\n;
-This is an access modifier for \l;class\u cbot\class; members. Protected class members can be accessed in a child class, but they can't be accessed outside of classes definitions being part of the same inheritance tree (see the \c;\l;extends\u cbot\extends;\n; keyword).
+Это модификатор доступа для членов \l;класса\u cbot\class;. Protected class members can be accessed in a child class, but they can't be accessed outside of classes definitions being part of the same inheritance tree (see the \c;\l;extends\u cbot\extends;\n; keyword).
 
-\t;Пример
+\t;Пример:
 \c;
 \s;public class Parent
 \s;{
@@ -20,7 +20,7 @@ This is an access modifier for \l;class\u cbot\class; members. Protected class m
 \s;{
 \s;	Child child();
 \s;	child.Print(); // 0
-\s;	//child.field = 1; // Error!
+\s;	//child.field = 1; // Вызовет ошибку!
 \s;}
 \n;
 \t;См. также

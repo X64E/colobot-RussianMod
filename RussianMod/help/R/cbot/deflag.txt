@@ -1,4 +1,4 @@
-\b;Instruction \c;deflag\n;
+\b;Инструкция \c;deflag\n;
 Синтаксис:
 \s;\c;deflag ( );\n;
 
@@ -6,8 +6,8 @@ Removes a \l;colored flag\u object\flag; in front of the \l;sniffer\u object\bot
 
 \t;Возвращаемое значение: \c;\l;int\u cbot\int;\n;
 Обычно при возникновении ошибки выполнение программы останавливается. Избежать этого можно применив инструкцию \c;\l;errmode\u cbot\errmode;(0)\n; . Тогда при возникновении ошибки будет возвращено значение отличное от нуля инструкцией \c;deflag();\n;.
-\c;== 0 \n;removed a flag
-\c;!= 0 \n;could not remove a flag
+\c;== 0 \n;флаг успешно убран
+\c;!= 0 \n;флаг не удалось убрать
 
 \t;См. также
 \l;Программирование\u cbot;, \l;типы\u cbot\type; и \l;категории\u cbot\category;.

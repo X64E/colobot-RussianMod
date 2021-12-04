@@ -1,15 +1,15 @@
-\b;Instruction \c;pencolor\n;
+\b;Инструкция \c;pencolor\n;
 Синтаксис:
 \s;\c;pencolor ( color );\n;
-The instruction \c;pencolor();\n; instructs the bot to change the color of the pencil.
+Инструкция \c;pencolor();\n; устанавливает цвет кисти робота.
 
 \t;color: \c;\l;int\u cbot\int;\n; (default value: \c;Black\n;)
-\l;Color name\u cbot\colors;.
+\l;Название цвета\u cbot\colors;.
 
 \t;Возвращаемое значение: \c;\l;int\u cbot\int;\n;
 Обычно при возникновении ошибки выполнение программы останавливается. Избежать этого можно применив инструкцию \c;\l;errmode\u cbot\errmode;(0)\n; . Тогда при возникновении ошибки будет возвращено значение отличное от нуля инструкцией \c;pencolor();\n;.
-\c;== 0 \n;The color was changed
-\c;!= 0 \n;The instruction did not work
+\c;== 0 \n;Цвет успешно установлен 
+\c;!= 0 \n;Не удалось установить цвет
 
 \t;См. также
 \l;Программирование\u cbot;, \l;типы\u cbot\type; и \l;категории\u cbot\category;.
