@@ -20,7 +20,7 @@ o  \c;\const;Константы\norm;\n;
 \c;\l;switch\u cbot\switch;     \n;Оператор множественного выбора
 \c;\l;case\u cbot\switch;       \n;Оператор указания варианта выбора
 \c;\l;default\u cbot\switch;    \n;Оператор выбора по умолчанию
-\c;\l;for\u cbot\for;        \n;Опертор цикла for
+\c;\l;for\u cbot\for;        \n;Оператор цикла for
 \c;\l;while\u cbot\while;      \n;Оператор цикла while
 \c;\l;do\u cbot\do;         \n;Оператор цикла do - while
 \c;\l;break\u cbot\break;      \n;Оператор выхода из цикла
@@ -44,7 +44,7 @@ o  \c;\const;Константы\norm;\n;
 \c;\l;motor\u cbot\motor;      \n;Прямое управление моторами
 \c;\l;jet\u cbot\jet;        \n;Прямое управление реактивным двигателем
 \c;\l;message\u cbot\message;    \n;Вывести сообщение
-\c;\l;retobject\u cbot\retobj;  \n;Возвращает объект по его уникальному иденитификатору
+\c;\l;retobject\u cbot\retobj;  \n;Возвращает объект по его индексу
 \c;\l;errmode\u cbot\errmode;    \n;Управление обработкой ошибок
 \c;\l;abstime\u cbot\abstime;    \n;Возвращает абсолютное время
 \c;\l;pendown\u cbot\pendown;    \n;Начать рисование (Опустить кисть)
@@ -122,7 +122,7 @@ o  \c;\const;Константы\norm;\n;
 \c;\l;floor\u cbot\floor;      \n;Возвращает число округленное в большую сторону
 \c;\l;ceil\u cbot\ceil;       \n;Возвращает число округленное в меньшую сторону
 \c;\l;round\u cbot\round;      \n;Возвращает округленное число
-\c;\l;trunc\u cbot\trunc;      \n;целую часть числа без дробной части
+\c;\l;trunc\u cbot\trunc;      \n;Возвращает целую часть числа без дробной части
 \c;\l;sin\u cbot\sin;        \n;Возвращает синус
 \c;\l;cos\u cbot\cos;        \n;Возвращает косинус
 \c;\l;tan\u cbot\tan;        \n;Возвращает тангенс
