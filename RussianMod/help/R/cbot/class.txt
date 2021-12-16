@@ -1,16 +1,21 @@
-\b;Инструкция \c;class\n;
-This keyword allows you to create a class definition by using the following syntax:
+\b;Ключевое слово \c;class\n;
+Данное ключевое слово позволяет определить новый пользовательский тип данных - класс. Чтобы определить новый класс используйте следующий синтаксис:
 \c;
 \s;public class ClassName
 \s;{
-\s;	declarations;
+\s;	// определение полей и методов класса;
 \s;}
 \n;
-\t;Все классы по умолчанию являются Public
+
+Экземпляры (копии) класса называются объектами. Можно сказать так же, что класс представляет собой шаблон для создания объекта.
+
+\t;Все классы по умолчанию являются публичными (public)
 Классы могут быть \l;public\u cbot\public;. Это означает, что они могут использоватсья всеми ботами миссии.
 
 \b;Члены классов
-Class members are fields (\l;variables\u cbot\var;) and methods (\l;functions\u cbot\function;).
+Класс может содержать в себе поля (\l;переменные\u cbot\var;) и методы (\l;функции\u cbot\function;).
+Переменные - входящие в определение класса называются полями. 
+Функции - входящие в определение класса называются методами.
 
 For example, the following class dubbed \c;MyClass\n; contains 4 fields (\c;a\n;, \c;b\n;, \c;x\n; and \c;s\n;) and one method (\c;MyFunction\n;).
 \c;
