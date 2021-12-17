@@ -7,45 +7,45 @@
 
 \t;Здания:
 
-\button 176;   \c;\l;Houston\u object\huston;          \n;Центр Управления Полётами
+\button 176;   \c;\l;Houston\u object\huston;          \n;Центр управления полётами
 \button 171;   \c;\l;SpaceShip\u object\base;        \n;Космический корабль
 \button 160;   \c;\l;BotFactory\u object\factory;       \n;Фабрика роботов
-\button 163;   \c;\l;ResearchCenter\u object\research;   \n;Исследователький Центр
+\button 163;   \c;\l;ResearchCenter\u object\research;   \n;Исследователький центр
 \button 168;   \c;\l;RadarStation\u object\radar;     \n;Радар
 \button 172;   \c;\l;ExchangePost\u object\exchange;     \n;Пост обмена информацией 
-\button 169;   \c;\l;RepairCenter\u object\repair;     \n;Repair Center
+\button 169;   \c;\l;RepairCenter\u object\repair;     \n;Ремонтный центр
 \button 165;   \c;\l;DefenseTower\u object\tower;     \n;Защитная башня
-\button 166;   \c;\l;AutoLab\u object\labo;          \n;Organic Matter Analyzer 
-\button 164;   \c;\l;PowerStation\u object\station;     \n;Power Station
-\button 167;   \c;\l;PowerPlant\u object\energy;       \n;Power Cell Factory
-\button 170;   \c;\l;NuclearPlant\u object\nuclear;     \n;Nuclear Plant
-\button 162;   \c;\l;Converter\u object\convert;        \n;Titanium Converter
-\button 161;   \c;\l;Derrick\u object\derrick;          \n;Derrick
-\button 174;   \c;\l;PowerCaptor\u object\captor;      \n;Parabolic Lightning Conductor
+\button 166;   \c;\l;AutoLab\u object\labo;          \n;Анализатор органической материи
+\button 164;   \c;\l;PowerStation\u object\station;     \n;Электростанция
+\button 167;   \c;\l;PowerPlant\u object\energy;       \n;Фабрика аккумуляторных батарей
+\button 170;   \c;\l;NuclearPlant\u object\nuclear;     \n;Фабрика ядерных батарей
+\button 162;   \c;\l;Converter\u object\convert;        \n;Конвертер (преобразователь руды в титан)
+\button 161;   \c;\l;Derrick\u object\derrick;          \n;Буровая установка
+\button 174;   \c;\l;PowerCaptor\u object\captor;      \n;Параболический громоотвод
 \button 175;   \c;\l;Vault\u object\safe;            \n;Хранилище
-       \c;\l;StartArea\u object\start;        \n;Starting Pad
-       \c;\l;GoalArea\u object\goal;         \n;Finishing Pad
-       \c;\l;Target1\u object\target1;          \n;Flying target
-       \c;\l;AlienNest\u object\nest;        \n;Alien Nest
+       \c;\l;StartArea\u object\start;        \n;Стартовая площадка
+       \c;\l;GoalArea\u object\goal;         \n;Финишная площадка
+       \c;\l;Target1\u object\target1;          \n;Контрольные ворота
+       \c;\l;AlienNest\u object\nest;        \n;Гнездо чужих
 
 
 \t;Portable Objects:
 
-       \c;\l;TitaniumOre\u object\titanore;          \n;Титановая Руда
-       \c;\l;UraniumOre\u object\uranore;           \n;Урановая Руда
+       \c;\l;TitaniumOre\u object\titanore;          \n;Титановая руда
+       \c;\l;UraniumOre\u object\uranore;           \n;Урановая руда
        \c;\l;Titanium\u object\titan;             \n;Куб переработанного титана
-       \c;\l;PowerCell\u object\power;            \n;Обычная Батарейка
-       \c;\l;NuclearCell\u object\atomic;          \n;Ядерная Батарейка
-       \c;\l;OrgaMatter\u object\bullet;           \n;Органическая Материя
-       \c;\l;BlackBox\u object\bbox;             \n;Черный Ящик
+       \c;\l;PowerCell\u object\power;            \n;Аккумуляторная батарея
+       \c;\l;NuclearCell\u object\atomic;          \n;Ядерная Батарея
+       \c;\l;OrgaMatter\u object\bullet;           \n;Органическая материя
+       \c;\l;BlackBox\u object\bbox;             \n;Черный ящик
        \c;\l;TNT\u object\tnt;                  \n;Взрывное устройство
-       \c;\l;KeyA..D\u object\key;              \n;Ключи A, B, C and D
+       \c;\l;KeyA..D\u object\key;              \n;Ключи A, B, C и D
 
 
 \t;Роботы:
 
 \button 158;   \c;\l;PracticeBot\u object\bottr;            \n;Тренировочный Бот
-\button 173;   \c;\l;TargetBot\u object\bottarg;              \n;Целевой бот
+\button 173;   \c;\l;TargetBot\u object\bottarg;              \n;Самоходная мишень
 
 \button 137;   \c;\l;WheeledGrabber\u object\botgr;         \n;Колесный сборщик
 \button 138;   \c;\l;TrackedGrabber\u object\botgc;         \n;Гусеничный сборщик
@@ -81,7 +81,7 @@
 
 \t;Enemies:
 
-       \c;\l;AlienQueen\u object\mother;         \n;Королева Чужих
+       \c;\l;AlienQueen\u object\mother;         \n;Королева чужих
        \c;\l;AlienEgg\u object\egg;           \n;Яйцо чужого
        \c;\l;AlienAnt\u object\ant;           \n;Муравей
        \c;\l;AlienSpider\u object\spider;        \n;Паук
@@ -105,16 +105,16 @@
 
 \t;Флагие и Другие Маркеры:
 
-       \c;\l;BlueFlag\u object\flag;          \n;Blue Flag
-       \c;\l;RedFlag\u object\flag;           \n;Red Flag
-       \c;\l;GreenFlag\u object\flag;         \n;Green Flag
-       \c;\l;YellowFlag\u object\flag;        \n;Yellow Flag
-       \c;\l;VioletFlag\u object\flag;        \n;Violet Flag
+       \c;\l;BlueFlag\u object\flag;          \n;Синий флаг
+       \c;\l;RedFlag\u object\flag;           \n;Красный флаг
+       \c;\l;GreenFlag\u object\flag;         \n;Зелёный флаг
+       \c;\l;YellowFlag\u object\flag;        \n;Жёлтый флаг
+       \c;\l;VioletFlag\u object\flag;        \n;Фиолетовый флаг
        \c;\l;WayPoint\u object\waypoint;          \n;Контрольная точка (чекпоинт)
-       \c;\l;Target2\u object\target2;           \n;Flying checkpoint
-       \c;\l;PowerSpot\u object\enerspot;         \n;Underground Energy Deposit
-       \c;\l;TitaniumSpot\u object\stonspot;      \n;Underground Titanium Deposit
-       \c;\l;UraniumSpot\u object\uranspot;       \n;Underground Uranium Deposit
+       \c;\l;Target2\u object\target2;           \n;Парящая контрольная точка (чекпоинт)
+       \c;\l;PowerSpot\u object\enerspot;         \n;Подземное месторождение энергии
+       \c;\l;TitaniumSpot\u object\stonspot;      \n;Подземные залежи титана
+       \c;\l;UraniumSpot\u object\uranspot;       \n;Подземные залежи урана
 
 \t;См. также
 \l;Язык CBOT\u cbot; и \l;Переменные\u cbot\type;.
